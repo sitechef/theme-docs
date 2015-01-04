@@ -1,0 +1,14 @@
+site_name: SiteChef Theme Documentation
+pages:
+- [index.md, Home]
+- [installation.md, Installation]
+- [structure.md, Theme File Structure]
+- [templating.md, HTML Templating]
+- [scss.md, Stylesheets]
+- [scripts.md, Frontend Scripting]
+- [datastructure.md, Data Structure]
+- [publishing.md, How to Publish Your Theme]
+theme_dir: theme
+google_analytics: UA-51231189-4
+copyright: SiteChef 2014
+
