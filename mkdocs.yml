@@ -1,13 +1,17 @@
 site_name: SiteChef Theme Documentation
 pages:
-- [index.md, Home]
-- [installation.md, Installation]
-- [structure.md, Theme File Structure]
-- [templating.md, HTML Templating]
-- [scss.md, Stylesheets]
-- [scripts.md, Frontend Scripting]
-- [datastructure.md, Data Structure]
-- [publishing.md, How to Publish Your Theme]
+- [index.md, General Use, Introduction & QuickStart]
+- [installation.md, General Use, Installation]
+- [structure.md, General Use, Theme Structure]
+- [templating.md, General Use, HTML Templating]
+- [scss.md, General Use,  Stylesheets]
+- [assetpipeline.md, General Use, Compiling Frontend Assets]
+- [datastructure.md,General Use,  Data Structure]
+- [frontendapi.md,General Use,  Frontend API Overview]
+- [publishing.md, General Use, How to Publish Your Theme]
+- [configfiles/sitechefrc.md, Config Files, .sitechefrc]
+- [configfiles/themejson.md, Config Files, theme.json]
+- [libraries/index.md, Frontend Library Reference, Overview]
 theme_dir: theme
 google_analytics: UA-51231189-4
 copyright: SiteChef 2014

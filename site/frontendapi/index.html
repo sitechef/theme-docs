@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation - SiteChef Theme Documentation</title>
+  <title>Frontend API Overview - SiteChef Theme Documentation</title>
   
 
   
@@ -50,18 +50,8 @@
                     
                 </li>
             
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Installation</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#installing-the-sitechef-cli">Installing The SiteChef CLI</a></li>
-                            
-                        
-                            <li class="toctree-l2"><a href="#generate-an-api-key-for-a-theme">Generate an API key for a theme</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l1 ">
+                    <a class="" href="../installation">Installation</a>
                     
                 </li>
             
@@ -90,8 +80,28 @@
                     
                 </li>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../frontendapi">Frontend API Overview</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">Frontend API Overview</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#json-api">JSON Api</a></li>
+                            
+                        
+                            <li class="toctree-l2"><a href="#endpoints">Endpoints</a></li>
+                            
+                                <li><a class="toctree-l3" href="#apimediaitem_id-get">/api/media/{item_id} GET</a></li>
+                            
+                                <li><a class="toctree-l3" href="#apicategorypage_id-get">/api/category/{page_id} GET</a></li>
+                            
+                                <li><a class="toctree-l3" href="#apiblogpostpost_id-get">/api/blogpost/{post_id} GET</a></li>
+                            
+                                <li><a class="toctree-l3" href="#apistreamsinstagram-get">/api/streams/instagram GET</a></li>
+                            
+                                <li><a class="toctree-l3" href="#apimailchimpsubscribesite_id-post">/api/mailchimp/subscribe/{site_id} POST</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
@@ -150,7 +160,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="..">Theme Documentation</a> &raquo;</li>
-    <li>Installation</li>
+    <li>Frontend API Overview</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -158,30 +168,45 @@
   <hr/>
 </div>
           <div role="main">
-            <div class="section installation">
-              <h1 id="installing-the-sitechef-cli">Installing The SiteChef CLI</h1>
-<ol>
-<li>Install <a href="../nodejs.org/download">Node.js</a></li>
-<li>Install the SiteChef command line utility <code>npm install sitechef -g</code></li>
-<li>Clone your theme to a local directory
-  <code>sitechef init [your-api-key] [optional directory name]</code>
-  eg: <code>sitechef init 999999999888888</code>
-  (see <a href="#generate-an-api-key-for-a-theme">below</a> for more info)</li>
-<li>Move to your directory (<code>cd [your-directory]</code>) and run the local server <code>sitechef serve</code></li>
-</ol>
-<h1 id="generate-an-api-key-for-a-theme">Generate an API key for a theme</h1>
-<ol>
-<li>Sign in to the <a href="https://admin.sitechef.co.uk">SiteChef Admin area</a></li>
-<li>Go to the "Your Account" section</li>
-<li>Turn on "Developer Mode":
-  <img style="display:block" src="../img/developer_mode.png"></li>
-<li>Go to "Theme Manager" and click "Edit/Clone Existing"</li>
-<li>Select one of the existing themes and choose "New From This"
-  <img style="display:block;" src="../img/base_theme.png"></li>
-<li>Create a new name and description for this theme.
-   "Clonable" means that this theme can be cloned by other developers
-   "Private" means that this theme will only be made available to the current site</li>
-</ol>
+            <div class="section frontend-api-overview">
+              <h1 id="json-api">JSON Api</h1>
+<p>All SiteChef websites have a JSON api that is available via standard AJAX requests</p>
+<p>They are available by the endpoint <code>/api/</code></p>
+<h1 id="endpoints">Endpoints</h1>
+<h2 id="apimediaitem_id-get"><code>/api/media/{item_id}</code> GET</h2>
+<p>Fetches data about a a particular item</p>
+<h3 id="parameter-item_id-int-id-of-item">Parameter item_id <code>int</code> <em>id of item</em></h3>
+<h3 id="returns-item-struct">Returns <a href="../datastructure#item-struct">Item Struct</a></h3>
+<h2 id="apicategorypage_id-get"><code>/api/category/{page_id}</code> GET</h2>
+<p>Fetches data for a particular page</p>
+<h3 id="parameter-page_id-int-id-of-page">Parameter page_id <code>int</code> <em>id of page</em></h3>
+<h3 id="returns-content-struct">Returns <a href="../datastructure#content-struct">Content Struct</a></h3>
+<h2 id="apiblogpostpost_id-get"><code>/api/blogpost/{post_id}</code> GET</h2>
+<p>Fetches data for a particular page</p>
+<h3 id="parameter-post_id-int-id-of-post">Parameter post_id <code>int</code> <em>id of post</em></h3>
+<h3 id="returns-blog-post-struct">Returns <a href="../datastructure#blog-post-struct">Blog Post Struct</a></h3>
+<h2 id="apistreamsinstagram-get"><code>/api/streams/instagram</code> GET</h2>
+<p>Fetches user's instagram feed</p>
+<h3 id="parameter-post_id-int-id-of-post_1">Parameter post_id <code>int</code> <em>id of post</em></h3>
+<h3 id="returns-array-item-struct-item-struct">Returns <code>array</code> [<a href="../datastructure#item-struct">Item Struct</a>, <a href="../datastructure#item-struct">Item Struct</a>, ...]</h3>
+<h2 id="apimailchimpsubscribesite_id-post"><code>/api/mailchimp/subscribe/{site_id}</code> POST</h2>
+<p>Adds a visitor to the SiteChef user's mailchimp list</p>
+<h3 id="request-body">Request Body</h3>
+<p>The body variables are as set by the mailchimp user.
+By default they are:</p>
+<pre><code>{
+    "FNAME":"&lt;FirstName&gt;",
+    "LNAME":"&lt;LastName&gt;",
+    "LNAME":"&lt;LastName&gt;"
+}
+</code></pre>
+<h3 id="parameter-post_id-int-site-id">Parameter post_id <code>int</code> <em>site id</em></h3>
+<h3 id="returns-object">Returns <code>object</code></h3>
+<pre><code>{
+    "succes": true, //boolean
+    "errors":[] // any errors
+}
+</code></pre>
 
             </div>
           </div>
@@ -189,10 +214,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../structure" class="btn btn-neutral float-right" title="Theme Structure"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../publishing" class="btn btn-neutral float-right" title="How to Publish Your Theme"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Introduction & QuickStart"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../datastructure" class="btn btn-neutral" title="Data Structure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -218,8 +243,8 @@
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../structure" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../datastructure" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../publishing" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 <script>

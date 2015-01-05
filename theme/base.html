@@ -17,6 +17,7 @@
   {%- for path in extra_css %}
   <link href="{{ path }}" rel="stylesheet">
   {%- endfor %}
+  <link rel="icon" type="image/png" href="{{ base_url }}/img/favicon.png">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -29,7 +30,7 @@
   <style>
     body {font-size: 90%;}
     pre, code {font-size: 100%;}
-    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+    h3, h4, h5, h6 {color: #6A6A6A; font-weight: 300}
   </style>
   {%- block extrahead %} {% endblock %}
 </head>
@@ -64,7 +65,7 @@
         <div class="rst-content">
           {% include "breadcrumbs.html" %}
           <div role="main">
-            <div class="section">
+            <div class="section {{ current_page.title | lower | replace(" ", "-") }}">
               {{ content }}
             </div>
           </div>

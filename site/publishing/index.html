@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -23,7 +24,7 @@
   <style>
     body {font-size: 90%;}
     pre, code {font-size: 100%;}
-    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+    h3, h4, h5, h6 {color: #6A6A6A; font-weight: 300}
   </style> 
 </head>
 
@@ -42,44 +43,87 @@
       <ul class="current">
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="../installation">Installation</a>
-            </li>
+        <span>General Use</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="..">Introduction & QuickStart</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../installation">Installation</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../structure">Theme Structure</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../templating">HTML Templating</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../scss">Stylesheets</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../assetpipeline">Compiling Frontend Assets</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../datastructure">Data Structure</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../frontendapi">Frontend API Overview</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">How to Publish Your Theme</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#publish-your-theme">Publish Your Theme</a></li>
+                            
+                        
+                        </ul>
+                    
+                </li>
+            
         
 
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="../templating">HTML Templating</a>
-            </li>
+        <span>Config Files</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../configfiles/sitechefrc">.sitechefrc</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../configfiles/themejson">theme.json</a>
+                    
+                </li>
+            
         
 
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="../scss">Stylesheets</a>
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 ">
-                <a class="" href="../scripts">Frontend Scripting</a>
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 ">
-                <a class="" href="../datastructure">Data Structure</a>
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 current">
-                <a class="current" href=".">How to Publish Your Theme</a>
-            </li>
+        <span>Frontend Library Reference</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries">Overview</a>
+                    
+                </li>
+            
         
 
     
@@ -111,16 +155,27 @@
   <hr/>
 </div>
           <div role="main">
-            <div class="section">
-              
+            <div class="section how-to-publish-your-theme">
+              <h1 id="publish-your-theme">Publish Your Theme</h1>
+<p>Before publishing your theme, ensure that all pages load correctly without
+javascript or css errors.</p>
+<p>We highly recommend trying your theme on a number of browsers first.</p>
+<p>Ensure that you run <code>sitechef serve</code> at least once before the final publish to
+check that everything works.</p>
+<p>Once ready to publish execute <code>sitechef publish</code>.</p>
+<p>Your theme will now be published back to SiteChef and be available on your or
+your client's website.</p>
+
             </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../configfiles/sitechefrc" class="btn btn-neutral float-right" title=".sitechefrc"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../datastructure" class="btn btn-neutral" title="Data Structure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../frontendapi" class="btn btn-neutral" title="Frontend API Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -146,8 +201,8 @@
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../datastructure" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../frontendapi" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../configfiles/sitechefrc" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 <script>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation - SiteChef Theme Documentation</title>
+  <title>Overview - SiteChef Theme Documentation</title>
   
 
   
@@ -50,18 +50,8 @@
                     
                 </li>
             
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Installation</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#installing-the-sitechef-cli">Installing The SiteChef CLI</a></li>
-                            
-                        
-                            <li class="toctree-l2"><a href="#generate-an-api-key-for-a-theme">Generate an API key for a theme</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l1 ">
+                    <a class="" href="../installation">Installation</a>
                     
                 </li>
             
@@ -122,8 +112,12 @@
         
         <span>Frontend Library Reference</span>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../libraries">Overview</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">Overview</a>
+                    
+                        <ul>
+                        
+                        </ul>
                     
                 </li>
             
@@ -150,7 +144,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="..">Theme Documentation</a> &raquo;</li>
-    <li>Installation</li>
+    <li>Overview</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -158,30 +152,13 @@
   <hr/>
 </div>
           <div role="main">
-            <div class="section installation">
-              <h1 id="installing-the-sitechef-cli">Installing The SiteChef CLI</h1>
-<ol>
-<li>Install <a href="../nodejs.org/download">Node.js</a></li>
-<li>Install the SiteChef command line utility <code>npm install sitechef -g</code></li>
-<li>Clone your theme to a local directory
-  <code>sitechef init [your-api-key] [optional directory name]</code>
-  eg: <code>sitechef init 999999999888888</code>
-  (see <a href="#generate-an-api-key-for-a-theme">below</a> for more info)</li>
-<li>Move to your directory (<code>cd [your-directory]</code>) and run the local server <code>sitechef serve</code></li>
-</ol>
-<h1 id="generate-an-api-key-for-a-theme">Generate an API key for a theme</h1>
-<ol>
-<li>Sign in to the <a href="https://admin.sitechef.co.uk">SiteChef Admin area</a></li>
-<li>Go to the "Your Account" section</li>
-<li>Turn on "Developer Mode":
-  <img style="display:block" src="../img/developer_mode.png"></li>
-<li>Go to "Theme Manager" and click "Edit/Clone Existing"</li>
-<li>Select one of the existing themes and choose "New From This"
-  <img style="display:block;" src="../img/base_theme.png"></li>
-<li>Create a new name and description for this theme.
-   "Clonable" means that this theme can be cloned by other developers
-   "Private" means that this theme will only be made available to the current site</li>
-</ol>
+            <div class="section overview">
+              <p>SiteChef comes bundled with a number of frontend
+libraries that will save you a lot of time when
+interacting with assets uploaded by SiteChef users</p>
+<p>These libraries are free to use and modify on any
+SiteChef-hosted site.</p>
+<p>If you have any questions please get in touch at <a href="MAILTO:dev@sitechef.co.uk">dev@sitechef.co.uk</a></p>
 
             </div>
           </div>
@@ -189,10 +166,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../structure" class="btn btn-neutral float-right" title="Theme Structure"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href=".." class="btn btn-neutral" title="Introduction & QuickStart"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../configfiles/themejson" class="btn btn-neutral" title="theme.json"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -218,8 +193,8 @@
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../structure" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../configfiles/themejson" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 <script>

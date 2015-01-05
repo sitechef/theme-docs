@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./css/theme.css" type="text/css" />
   <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="./css/highlight.css">
+  <link rel="icon" type="image/png" href="./img/favicon.png">
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -23,7 +24,7 @@
   <style>
     body {font-size: 90%;}
     pre, code {font-size: 100%;}
-    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
+    h3, h4, h5, h6 {color: #6A6A6A; font-weight: 300}
   </style> 
 </head>
 
@@ -42,44 +43,90 @@
       <ul class="current">
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="installation/">Installation</a>
-            </li>
+        <span>General Use</span>
+            
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">Introduction & QuickStart</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#introduction">Introduction</a></li>
+                            
+                        
+                            <li class="toctree-l2"><a href="#quickstart">Quickstart</a></li>
+                            
+                        
+                        </ul>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="installation/">Installation</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="structure/">Theme Structure</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="templating/">HTML Templating</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="scss/">Stylesheets</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="assetpipeline/">Compiling Frontend Assets</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="datastructure/">Data Structure</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="frontendapi/">Frontend API Overview</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="publishing/">How to Publish Your Theme</a>
+                    
+                </li>
+            
         
 
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="templating/">HTML Templating</a>
-            </li>
+        <span>Config Files</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="configfiles/sitechefrc/">.sitechefrc</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="configfiles/themejson/">theme.json</a>
+                    
+                </li>
+            
         
 
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="scss/">Stylesheets</a>
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 ">
-                <a class="" href="scripts/">Frontend Scripting</a>
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 ">
-                <a class="" href="datastructure/">Data Structure</a>
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 ">
-                <a class="" href="publishing/">How to Publish Your Theme</a>
-            </li>
+        <span>Frontend Library Reference</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="libraries/">Overview</a>
+                    
+                </li>
+            
         
 
     
@@ -103,7 +150,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".">Theme Documentation</a> &raquo;</li>
-    <li>Home</li>
+    <li>Introduction & QuickStart</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -111,10 +158,20 @@
   <hr/>
 </div>
           <div role="main">
-            <div class="section">
-              <h1 id="sitechef-theme-documentation">SiteChef Theme Documentation</h1>
-<p>This is a guide to creating and editing themes using the SiteChef Cli tool</p>
-<h2 id="quickstart">Quickstart</h2>
+            <div class="section introduction-&-quickstart">
+              <h1 id="introduction">Introduction</h1>
+<p>This is a guide to creating and editing themes using the SiteChef CLI tool</p>
+<p>The SiteChef CLI tool and the base themes supplied with SiteChef have been designed
+to be easy-to-modify, simple to setup and, as far as possible use common open standards
+and open source tooling.</p>
+<p>Our goal is to support developers to help them deliver top quality, responsive
+websites for their clients <em>as quickly as possible</em>.</p>
+<p>If you have any problems with any of the aspects of theme generation, don't hesitate
+to get in touch at <a href="MAILTO:dev@sitechef.co.uk">dev@sitechef.co.uk</a>.
+This <a href="https://github.com/sitechef/theme-docs">documentation</a> and the
+<a href="https://github.com/sitechef/sitechef-cli">SiteChef CLI</a> are open source and we
+welcome any contributions.</p>
+<h1 id="quickstart">Quickstart</h1>
 <ol>
 <li>Install <a href="./nodejs.org/download">Node.js</a></li>
 <li>Install the SiteChef command line utility <code>npm install sitechef -g</code></li>
@@ -122,26 +179,9 @@
   <code>sitechef init [your-api-key] [optional directory name]</code>
   eg: <code>sitechef init 999999999888888</code></li>
 <li>Move to your directory (<code>cd [your-directory]</code>) and run the local server <code>sitechef serve</code></li>
+<li>View your theme hosted locally at <a href="http:/">http://localhost:3999/</a></li>
+<li>When you are happy with your changes, publish your theme back to SiteChef with <code>sitechef publish</code></li>
 </ol>
-<h2 id="how-to-generate-an-api-key-for-a-theme">How to generate an API key for a theme</h2>
-<ol>
-<li>Sign in to the <a href="https://admin.sitechef.co.uk">SiteChef Admin area</a></li>
-<li>Go to the "Your Account" section</li>
-<li>Turn on "Developer Mode":
-  <img style="display:block" src="./img/developer_mode.png"></li>
-<li>Go to "Theme Manager" and click "Edit/Clone Existing"</li>
-<li>Select one of the existing themes and choose "New From This"
-  <img style="display:block;" src="./img/base_theme.png"></li>
-<li>Create a new name and description for this theme.
-   "Clonable" means that this theme can be cloned by other developers
-   "Private" means that this theme will only be made available to the current site</li>
-</ol>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
 
             </div>
           </div>
