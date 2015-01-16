@@ -12,6 +12,12 @@ pages:
 - [configfiles/sitechefrc.md, Config Files, .sitechefrc]
 - [configfiles/themejson.md, Config Files, theme.json]
 - [libraries/index.md, Frontend Library Reference, Overview]
+- [libraries/analytics.md, Frontend Library Reference, Analytics]
+- [libraries/clevercrop.md, Frontend Library Reference, JQuery CleverCrop]
+- [libraries/heightfix.md, Frontend Library Reference, Height Fix]
+- [libraries/historyscroll.md, Frontend Library Reference, History Scroll]
+- [libraries/resizer.md, Frontend Library Reference, Resizer]
+- [libraries/striploader.md, Frontend Library Reference, Strip Loader]
 theme_dir: theme
 google_analytics: UA-51231189-4
 copyright: SiteChef 2014
