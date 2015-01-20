@@ -16,6 +16,7 @@ pages:
 - [libraries/clevercrop.md, Frontend Library Reference, JQuery CleverCrop]
 - [libraries/heightfix.md, Frontend Library Reference, Height Fix]
 - [libraries/historyscroll.md, Frontend Library Reference, History Scroll]
+- [libraries/html5video.md, Frontend Library Reference, HTML5 Video]
 - [libraries/resizer.md, Frontend Library Reference, Resizer]
 - [libraries/striploader.md, Frontend Library Reference, Strip Loader]
 theme_dir: theme
