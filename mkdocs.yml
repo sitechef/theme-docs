@@ -18,6 +18,7 @@ pages:
 - [libraries/historyscroll.md, Frontend Library Reference, History Scroll]
 - [libraries/html5video.md, Frontend Library Reference, HTML5 Video]
 - [libraries/resizer.md, Frontend Library Reference, Resizer]
+- [libraries/styleddropdown.md, Frontend Library Reference, Styled Dropdown]
 - [libraries/striploader.md, Frontend Library Reference, Strip Loader]
 theme_dir: theme
 google_analytics: UA-51231189-4

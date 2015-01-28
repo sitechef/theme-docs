@@ -130,6 +130,31 @@ The imageBuild macro takes the following parameters:
 * *LazyLoad*: {Boolean} write the src of the image to data-src instead to enable lazy-loading
 
 
+##Single-Page (Strip) websites
+
+If you would like to load the content of each subcategory of the main page
+into a single scrolling frontpage, we have provided the following function `get_page()`
+that is only available on the backend.
+
+The function takes the parameter `id` - an `Integer` that corresponds to the id
+in either a [Content Struct](datastructure.md#content-struct) or [Menu Struct](datastructure.md#menu-struct).
+`get_page()` returns a [Content Struct](datastructure.md#content-struct).
+
+
+So to load all the children of the frontpage in a template this would work:
+
+      <div class="frontpage-children">
+        {% for child in menu %}
+          {# fetch the child content and assign it to a variable #}
+          {% set childContent = get_page(child.id) %}
+          <h2>{{ childContent.name }}</h2>
+          <div class="frontpage-child-body">
+           {{ childContent.body }}
+          </div>
+        {% endfor %}
+      </div>
+
+
 ##Filters
 
 Filters modify variables and follow a `|` and the variable: `{{ variable | filter }}`
