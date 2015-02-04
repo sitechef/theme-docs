@@ -42,6 +42,11 @@
 &nbsp; comingSoon `bool`              *whether or not the site is coming soon*
 &nbsp; restaurantName `string`
 &nbsp; restaurantDescription `string`
+&nbsp; restaurantGeo `object`         *Latitude and longitude of restaurant for maps and geo-tagging*
+&nbsp;    **{**
+&nbsp;         lat `float`
+&nbsp;         lng `float`
+&nbsp;    **}**
 &nbsp; address1 `string`
 &nbsp; address2 `string`
 &nbsp; postcode `string`
@@ -109,6 +114,10 @@
 &nbsp;  isExternal `bool`    *is this an external link*
 &nbsp;  showOnMobile `bool`  *display this page when viewed on mobile*
 &nbsp;  level `int`          *`0` is frontpage, `1` subcategory, `2` child of subcategory*
+&nbsp;  parent `object`      *information about the parent item of this menu*
+&nbsp;    **{**
+&nbsp;         id `integer`
+&nbsp;    **}**
 &nbsp;  children `array`
 &nbsp;  **[**
 &nbsp;    [Menu](#menu-struct) `struct`
@@ -147,6 +156,8 @@
 &nbsp;                                  *`2` - Food Menu*
 &nbsp;                                  *`3` - Stream - ie raw data from instragram*
 &nbsp;                                  *`4` - Static Page *
+&nbsp;                                  *`5` - External Link*
+&nbsp;                                  *`6` - Contact Page*
 &nbsp;  showOnMobile `bool`         *display this page when viewed on mobile*
 &nbsp;  linkImage `string`          *absolute path of the image to use when external sites show a preview of this page*
 &nbsp;  [featuredImage](#item-struct) `struct`      *featured image for this section (Image)*
@@ -156,6 +167,7 @@
 &nbsp;  customSettings `struct`     *[OPTIONAL] this is contingent on page type*
 &nbsp;  **{**
 &nbsp;      galleryType `string`    *Type of gallery: `carousel` or `mosaic`*
+&nbsp;      location `object`       *Location override*
 &nbsp;  **}**
 &nbsp;  blogPosts `array`           *Only present when `format` is `1`*
 &nbsp;  **[**
