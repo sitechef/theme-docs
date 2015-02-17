@@ -173,6 +173,14 @@
 &nbsp;  **[**
 &nbsp;      [Blog Post](#blog-post-struct) `struct`
 &nbsp;  **]**
+&nbsp;  foodMenu `struct`           *Only present when `format` is `2`*
+&nbsp;  **{**
+&nbsp;      id `integer`
+&nbsp;      menus `array`
+&nbsp;      **[**
+&nbsp;        [meal](#meal-struct)                *A meal e.g. Breakfast*
+&nbsp;      **]**
+&nbsp;  **}**
 **}**
 
 ##Item Struct
@@ -299,6 +307,53 @@
 &nbsp;  tags `string`               *comma delimited list of tags*
 &nbsp;  title `string`              *Blog title*
 &nbsp;  updatedAt `string`          *last saved date*
+**}**
+
+##Meal Struct
+
+####One of the meal menus on a food menu page
+
+**{**
+&nbsp;  id `int`                    *meal id*
+&nbsp;  published `bool`            *whether page has been published*
+&nbsp;  title `string`              *Title of the meal e.g Breakfast*
+&nbsp;  description `string`        *An optional description about this meal **contains HTML** *
+&nbsp;  content `string`            *The meal data type:*
+&nbsp;                              *`dishes` where dishes/courses are itemised*
+&nbsp;                              *`text` for free text*
+&nbsp;  courseOrder `array`        *list of courses if contentType `dishes`*
+&nbsp;   **[**
+&nbsp;      [Course](#course-struct) `struct`
+&nbsp;   **]**
+&nbsp;  body `string`               *raw body text if contentType `text`*
+&nbsp;  timePeriod `string`         *`morning`, `afternoon`, `evening` `allday`*
+&nbsp;  publishedDate `string`      *Date meal is set for*
+&nbsp;  updatedAt `string`          *last saved date*
+**}**
+
+##Course Struct
+
+####A section in a meal e.g "Starters"
+
+**{**
+&nbsp;  id `int`                    *course id*
+&nbsp;  title `string`              *course title e.g. Pasta*
+&nbsp;  description `string`        *course description - can contain HTML*
+&nbsp;  dishOrder `array`           *list of dishes in this course*
+&nbsp;   **[**
+&nbsp;      [Dish](#dish-struct) `struct`
+&nbsp;   **]**
+**}**
+
+##Dish Struct
+
+####An individual dish in a meal e.g "Poached Eggs"
+
+**{**
+&nbsp;  id `int`                    *dish id*
+&nbsp;  title `string`              *dish title e.g. Roast Beef*
+&nbsp;  ingredients `string`        *list of ingredients eg 'potatoes, hollandaise sauce, fennel'*
+&nbsp;  price `string`              *price e.g. '£10.50' or '10.50' etc*
 **}**
 
 
