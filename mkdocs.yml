@@ -27,4 +27,4 @@ pages:
 theme_dir: theme
 google_analytics: UA-51231189-4
 copyright: SiteChef 2014
-
+site_dir: ../theme-output
