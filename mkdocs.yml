@@ -20,12 +20,15 @@ pages:
 - [libraries/html5video.md, Frontend Library Reference, HTML5 Video]
 - [libraries/imagerotator.md, Frontend Library Reference, Image Rotator]
 - [libraries/imageloader.md, Frontend Library Reference, Image Loader]
+- [libraries/newsletter.md, Frontend Library Reference, Newsletter]
 - [libraries/resizer.md, Frontend Library Reference, Resizer]
 - [libraries/simpleparallax.md, Frontend Library Reference, Simple Parallax]
 - [libraries/screenheight.md, Frontend Library Reference, Screen Height]
 - [libraries/styleddropdown.md, Frontend Library Reference, Styled Dropdown]
 - [libraries/striploader.md, Frontend Library Reference, Strip Loader]
+- [libraries/swipes.md, Frontend Library Reference, Swipes]
 - [libraries/twitter.md, Frontend Library Reference, Twitter]
+- [libraries/videoclick.md, Frontend Library Reference, Video Click]
 theme_dir: theme
 google_analytics: UA-51231189-4
 copyright: SiteChef 2014
