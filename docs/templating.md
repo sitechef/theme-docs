@@ -189,6 +189,15 @@ see [here](http://jinja.pocoo.org/docs/dev/templates/#default)
 see [here](http://jinja.pocoo.org/docs/dev/templates/#escape)
 #####first
 see [here](http://jinja.pocoo.org/docs/dev/templates/#first)
+#####format_date
+*function(&lt;string&gt; inputDate, &lt;string&gt; outputFormat, &lt;string&gt; inputFormat (optional))*
+
+&nbsp;&nbsp;Returns a formatted date string.
+
+&nbsp;&nbsp;**N.B.** requires [Moment.js](http://momentjs.com)
+
+&nbsp;&nbsp;For date formatting reference see [the Moment.js documentation](http://momentjs.com/docs/#/displaying/)
+
 #####join
 see [here](http://jinja.pocoo.org/docs/dev/templates/#join)
 #####json_encode
