@@ -24,5 +24,5 @@ welcome any contributions.
   `sitechef init [your-api-key] [optional directory name]`
   eg: `sitechef init 999999999888888`
 4. Move to your directory (`cd [your-directory]`) and run the local server `sitechef serve`
-5. View your theme hosted locally at [http://localhost:3999/](http:/)
+5. View your theme hosted locally at [http://localhost:3999/](http://localhost:3999/)
 6. When you are happy with your changes, publish your theme back to SiteChef with `sitechef publish`
