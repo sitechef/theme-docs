@@ -173,6 +173,9 @@
 &nbsp;  **[**
 &nbsp;      [Blog Post](#blog-post-struct) `struct`
 &nbsp;  **]**
+&nbsp;  blogPageTotal `int`         *Only present when `format` is `1` total number of blog pages*
+&nbsp;  prevBlogPage `string`|`false` *Only present when `format` is `1` url to previous blog page*
+&nbsp;  nextBlogPage `string`|`false` *Only present when `format` is `1` url to next blog page*
 &nbsp;  foodMenu `struct`           *Only present when `format` is `2`*
 &nbsp;  **{**
 &nbsp;      id `integer`
