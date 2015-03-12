@@ -306,6 +306,7 @@
 &nbsp;  published `bool`            *whether page has been published*
 &nbsp;  renderedBody `string`       *body to display once widgets have been rendered*
 &nbsp;  slug `string`               *url fragment for this post*
+&nbsp;  link `string`               *absolute href of this post*
 &nbsp;  summary `string`            *text summary for blog pst*
 &nbsp;  tags `string`               *comma delimited list of tags*
 &nbsp;  title `string`              *Blog title*

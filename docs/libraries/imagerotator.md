@@ -40,6 +40,8 @@ JS:
       currentClass: 'my-current-class',
       // wait between change (ms)
       interval: 3000,
+      // wait for html5 video to end before moving onto next item
+      waitForVideo: true,
       /**
        * callback called when an item is set to 'current'
        * function is called with jQuery selector of element

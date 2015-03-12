@@ -133,6 +133,12 @@ on instantiation
       },
 
       /*
+       * @var {Boolean} - auto-play html5 video on mobile devices
+       */
+      videoOnMobile: false,
+
+
+      /*
        * @var {Function} -
        *     @param {JQueryElement} Current item
        *     @param {Integer} 0-based index for active item
