@@ -12,6 +12,7 @@
 &nbsp; environment `string`     *`development` if running locally or `production`*
 &nbsp; assetsRoot `string`      *the absolute url of the assets folder of your theme (this will be the `dist/` folder)*
 &nbsp; imageRoot `string`       *the absolute path of the user-uploads CDN*<span id="image-root"></a>
+&nbsp; assetsRoot `string`      *The absolute root of the `dist` folder once published*
 &nbsp; siteRoot `string`        *The absolute root of the theme*
 &nbsp; storageRoot `string`     *the absolute root of any user-uploaded documents*
 &nbsp; logo `string`            *html for the logo*
@@ -21,8 +22,12 @@
 &nbsp;                          *`subcategory` - any child of the frontpage*
 &nbsp;                          *`media` - a static page describing a user-uploaded image/video*
 &nbsp;                          *`post` - a static blog post *
+&nbsp;                          *`offer` - permalink page for a special offer*
 &nbsp; [preferences](#preferences-struct) `struct`     *list of user-set variables*
 &nbsp; [socialMedia](#socialmedia-array) `array`     *User social media links*
+&nbsp; [
+&nbsp;     [specialOffer](#special-offer-struct) `struct`         *Array of any valid special offers*
+&nbsp; ]
 &nbsp; [meta](#meta-struct) `struct`            *user-specific configuration automatically generated*
 &nbsp; [menu](#menu-array) `array`              *the main site navigation hiearchy with nested children*
 &nbsp; [menuChildren](#menu-array) `array`      *If the current page has children, they are listed here - useful for submenus*
@@ -127,6 +132,8 @@
 ##Content Struct
 
 ####The core content for the current page
+####*Below descriptions are for pages of type `subcategory`|`root`*
+####*-  other page types eg `post`|`offer` relate to their relevant struct*
 
 **{**
 &nbsp;  id `int`                    *the unique id of this page*
@@ -283,6 +290,25 @@
 &nbsp;          **]**
 &nbsp;      **}**
 &nbsp;  **]**
+**}**
+
+
+##Special Offer Struct
+
+####A Special Offer
+
+**{**
+&nbsp;  id `int`                    *blog post id*
+&nbsp;  slug `string`               *the url fragment for this offer*
+&nbsp;  [featuredImage](#item-struct) `struct`      *featured image for this section (Image)*
+&nbsp;  title `string`              *Offer title*
+&nbsp;  description `string`        *Offer description*
+&nbsp;  tAndCs `string`             *HTML-formatted text for Terms And Conditions relating to offer*
+&nbsp;  htmlTitle `string`          *text for the brower tab title*
+&nbsp;  metaDescription `string`    *text for the meta description for the page*
+&nbsp;  validFrom `string`          *date formatted YYYY-MM-DD hh:ii:ss*
+&nbsp;  validTo `string`            *date formatted YYYY-MM-DD hh:ii:ss*
+&nbsp;  updatedAt `string`          *last saved date*
 **}**
 
 
