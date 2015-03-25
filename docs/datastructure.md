@@ -25,6 +25,7 @@
 &nbsp;                          *`offer` - permalink page for a special offer*
 &nbsp; [preferences](#preferences-struct) `struct`     *list of user-set variables*
 &nbsp; [socialMedia](#socialmedia-array) `array`     *User social media links*
+&nbsp; specialOffers `array`    *Special Offers:*
 &nbsp; [
 &nbsp;     [specialOffer](#special-offer-struct) `struct`         *Array of any valid special offers*
 &nbsp; ]
