@@ -119,6 +119,7 @@
 &nbsp;  published `bool`     *whether or not the page has been published*
 &nbsp;  isExternal `bool`    *is this an external link*
 &nbsp;  showOnMobile `bool`  *display this page when viewed on mobile*
+&nbsp;  showInFooter `bool`  *display a link to this page in the page footer*
 &nbsp;  level `int`          *`0` is frontpage, `1` subcategory, `2` child of subcategory*
 &nbsp;  parent `object`      *information about the parent item of this menu*
 &nbsp;    **{**
@@ -167,6 +168,7 @@
 &nbsp;                                  *`5` - External Link*
 &nbsp;                                  *`6` - Contact Page*
 &nbsp;  showOnMobile `bool`         *display this page when viewed on mobile*
+&nbsp;  showInFooter `bool`         *display a link to this page in the page footer*
 &nbsp;  linkImage `string`          *absolute path of the image to use when external sites show a preview of this page*
 &nbsp;  [featuredImage](#item-struct) `struct`      *featured image for this section (Image)*
 &nbsp;  htmlTitle `string`          *text for the brower tab title*
