@@ -233,6 +233,10 @@
 &nbsp;  **{**
 &nbsp;      src `string`            *Absolute path of thumb image*
 &nbsp;  **}**
+&nbsp;  raw `struct`                *The raw original image if the original was png/gif/pdf*
+&nbsp;  **{**
+&nbsp;      src `string`            *Absolute path of raw original image*
+&nbsp;  **}**
 &nbsp;  ratio `float`               *width-height ratio of image = `height / width `*
 &nbsp;  focus `struct`              *user-selected position of most importance*
 &nbsp;  **{**
