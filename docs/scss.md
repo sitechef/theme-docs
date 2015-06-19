@@ -1,4 +1,6 @@
 SiteChef uses [SASS](http://www.sass-lang.com) to generate CSS.
+SCSS files are currently compiled using version `3.1.2` of node-sass
+
 
 #Writing SCSS/SASS
 
@@ -14,16 +16,16 @@ In order to link your production assets (images, fonts, etc)
 with your production stylesheet it is important that you use our inbuilt
 variables when specifying asset paths
 
-###1. `image-url(<your-image.png>)`
+###1. `imageUrl(<your-image.png>)`
 
 If you want to refer to any images in your `dist/img/` folder in your SCSS files
-use the SASS shorthand function `image-url()` and inside the path of the image
+use the SASS shorthand function `imageUrl()` and inside the path of the image
 relative to the `dist/img/` folder.
 
 eg.
 
     .container {
-      background: image-url(mybackground.png) top center no-repeat;
+      background: imageUrl(mybackground.png) top center no-repeat;
     }
 
 when in production will render to
@@ -38,7 +40,7 @@ when in production will render to
 
 This is a string of the absolute root of your `dist/` folder when in production.
 
-If you are linking images, please use the above `image-url()` function in
+If you are linking images, please use the above `imageUrl()` function in
 preference.
 
 The most common use-case would be for linking fonts in the `dist/font/` directory
@@ -176,7 +178,7 @@ SiteChef only bundles the SCSS for Foundation so if you plan to use their
 frontend javascript functionality, make sure to add their scripts to the
 `dist/js/` folder in your theme.
 
-The current version of Foundation used by SiteChef is `5.4.7`
+The current version of Foundation used by SiteChef is `5.5.2`
 
 To import foundation:
 
