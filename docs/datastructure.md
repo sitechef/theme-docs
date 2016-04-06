@@ -194,6 +194,16 @@
 &nbsp;        [meal](#meal-struct)                *A meal e.g. Breakfast*
 &nbsp;      **]**
 &nbsp;  **}**
+&nbsp;  customFields `struct`    *key-value hash of custom data for this page*
+&nbsp;  **{**
+&nbsp;      fieldKey `string`: <fieldValue - mixed>  *data as described in customFieldDescriptions*
+&nbsp;      ...
+&nbsp;  **}**
+&nbsp;  customFieldDescriptions `struct`    *key-value hash describing custom field types*
+&nbsp;  **{**
+&nbsp;      fieldKey `string`: <fieldValue - mixed>  *data as described in customFieldDescriptions*
+&nbsp;      ...
+&nbsp;  **}**
 **}**
 
 ##Item Struct
@@ -343,6 +353,16 @@
 &nbsp;  summary `string`            *text summary for blog pst*
 &nbsp;  tags `string`               *comma delimited list of tags*
 &nbsp;  title `string`              *Blog title*
+&nbsp;  customFields `struct`    *key-value hash of custom data for this page*
+&nbsp;  **{**
+&nbsp;      fieldKey `string`: <fieldValue - mixed>  *data as described in customFieldDescriptions*
+&nbsp;      ...
+&nbsp;  **}**
+&nbsp;  customFieldDescriptions `struct`    *key-value hash describing custom field types*
+&nbsp;  **{**
+&nbsp;      fieldKey `string`: <fieldValue - mixed>  *data as described in customFieldDescriptions*
+&nbsp;      ...
+&nbsp;  **}**
 &nbsp;  updatedAt `string`          *last saved date*
 **}**
 
