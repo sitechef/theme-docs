@@ -353,3 +353,39 @@ Raw regular expressions cannot be used inline or in filters
 
 ###[joiner function](http://mozilla.github.io/nunjucks/templating.html#joiner-separator)
 
+
+#Special Pages
+
+
+##comingSoon.html
+
+Coming soon is an option in the `Basic Settings` page
+for each site.
+
+When turned on, the templater will use the `comingSoon.html` page as the entrypoint
+
+Included are all the standard variables excluding the `content` struct
+
+
+##voucher.html
+
+When selling vouchers on a site, after a voucher has been purchased the
+user is offered a link where the voucher, with the message to the
+recipient is displayed.
+
+This should be formatted for printing so that it can be saved as a PDF
+or printed off directly
+
+The template will have access to all variables excluding `content` struct
+and additionally the `voucher` struct
+
+##voucherEmail.html
+
+When a voucher has been purchased the system will email the customer from
+the restaurant website's email address.
+
+This email should have the look and feel of other communications by the
+restaurant.
+
+The template will have access to all variables excluding `content` struct
+and additionally the `voucher` struct and the `emailSettings` struct

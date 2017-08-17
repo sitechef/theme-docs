@@ -26,6 +26,9 @@ This is the default theme folder structure:
         ...            # Other scss/sass files included in theme.scss
     templates/    # HTML template files
         index.html # Main entry-point for the theme
+        comingSoon.html # Entrypoint for when 'coming soon' is set to on
+        voucherEmail.html # template for generating the voucher email receipt
+        voucher.html # template for the voucher
         ...       # other html files included in index.html
     .sitechef/    # Configuration data for sitechef [Do not edit]
 #Config Files
