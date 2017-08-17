@@ -34,4 +34,4 @@ google_analytics:
   - UA-51231189-4
   - sitechef.co.uk
 copyright: SiteChef 2014
-site_dir: ../theme-output
+site_dir: dist
