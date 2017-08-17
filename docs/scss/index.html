@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Stylesheets</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #6A6A6A; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> SiteChef Theme Documentation</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+        <span>General Use</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="..">Introduction & QuickStart</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../installation/">Installation</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../structure/">Theme Structure</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../templating/">HTML Templating</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 current">
+                    <a class="current" href="./">Stylesheets</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#writing-scsssass">Writing SCSS/SASS</a></li>
+                            
+                        
+                            <li class="toctree-l2"><a href="#important-variables">Important Variables</a></li>
+                            
+                                <li><a class="toctree-l3" href="#1-imageurlyour-imagepng">1. imageUrl(your-image.png)</a></li>
+                            
+                                <li><a class="toctree-l3" href="#2-assetsroot">2. $assetsRoot</a></li>
+                            
+                        
+                            <li class="toctree-l2"><a href="#compilation">Compilation</a></li>
+                            
+                                <li><a class="toctree-l3" href="#defaultsscss">defaults.scss</a></li>
+                            
+                                <li><a class="toctree-l3" href="#themescss">theme.scss</a></li>
+                            
+                        
+                            <li class="toctree-l2"><a href="#included-libraries">Included Libraries</a></li>
+                            
+                                <li><a class="toctree-l3" href="#bourbon">Bourbon</a></li>
+                            
+                                <li><a class="toctree-l3" href="#foundation">Foundation</a></li>
+                            
+                                <li><a class="toctree-l3" href="#bootstrap">Bootstrap</a></li>
+                            
+                        
+                        </ul>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../assetpipeline/">Compiling Frontend Assets</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../datastructure/">Data Structure</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../frontendapi/">Frontend API Overview</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../publishing/">How to Publish Your Theme</a>
+                    
+                </li>
+            
+        
+
+    
+        
+        <span>Config Files</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../configfiles/sitechefrc/">.sitechefrc</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../configfiles/themejson/">theme.json</a>
+                    
+                </li>
+            
+        
+
+    
+        
+        <span>Frontend Library Reference</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/">Overview</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/analytics/">Analytics</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/carouselgallery/">Carousel Gallery</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/clevercrop/">JQuery CleverCrop</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/heightfix/">Height Fix</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/historyscroll/">History Scroll</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/html5video/">HTML5 Video</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/imagerotator/">Image Rotator</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/imageloader/">Image Loader</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/newsletter/">Newsletter</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/resizer/">Resizer</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/simpleparallax/">Simple Parallax</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/screenheight/">Screen Height</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/styleddropdown/">Styled Dropdown</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/striploader/">Strip Loader</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/swipes/">Swipes</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/twitter/">Twitter</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../libraries/videoclick/">Video Click</a>
+                    
+                </li>
+            
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".."></a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Theme Documentation</a> &raquo;</li>
+    <li>Stylesheets</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section stylesheets">
+              <p>SiteChef uses <a href="http://www.sass-lang.com">SASS</a> to generate CSS.
+SCSS files are currently compiled using version <code>3.1.2</code> of node-sass</p>
+<h1 id="writing-scsssass">Writing SCSS/SASS</h1>
+<p>See the <a href="http://www.sass-lang.com/guide">SASS website</a> for a full SASS guide.</p>
+<p>There are two variants of SASS: <code>scss</code> which is not indented and follows the
+conventions of css more closely and <code>sass</code> which is indented, but arguably
+faster to write</p>
+<h1 id="important-variables">Important Variables</h1>
+<p>In order to link your production assets (images, fonts, etc)
+with your production stylesheet it is important that you use our inbuilt
+variables when specifying asset paths</p>
+<h3 id="1-imageurlyour-imagepng">1. <code>imageUrl(&lt;your-image.png&gt;)</code></h3>
+<p>If you want to refer to any images in your <code>dist/img/</code> folder in your SCSS files
+use the SASS shorthand function <code>imageUrl()</code> and inside the path of the image
+relative to the <code>dist/img/</code> folder.</p>
+<p>eg.</p>
+<pre><code>.container {
+  background: imageUrl(mybackground.png) top center no-repeat;
+}
+</code></pre>
+<p>when in production will render to</p>
+<pre><code>.container {
+  background:
+  url(https://sitechefthemes.s3.amazonaws.com/themes/xx-xx/dist/img/mybackground.png)
+  top center no-repeat;
+}
+</code></pre>
+<h3 id="2-assetsroot">2. <code>$assetsRoot</code></h3>
+<p>This is a string of the absolute root of your <code>dist/</code> folder when in production.</p>
+<p>If you are linking images, please use the above <code>imageUrl()</code> function in
+preference.</p>
+<p>The most common use-case would be for linking fonts in the <code>dist/font/</code> directory</p>
+<p>eg.</p>
+<pre><code>@font-face {
+  font-family: "Bespoke Font";
+  src: url($assetsRoot + "fonts/BespokeFont.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+</code></pre>
+<p>will render in production to</p>
+<pre><code>@font-face {
+  font-family: "Bespoke Font";
+  src: url("https://sitechefthemes.s3.amazonaws.com/themes/xx-xx/dist/fonts/BespokeFont.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+</code></pre>
+<h1 id="compilation">Compilation</h1>
+<p>CSS Stylesheets are generated from the SCSS files in the <code>scss/</code> directory.</p>
+<p>SiteChef creates SASS variables for each of the design options that the user has
+selected at https://admin.sitechef.co.uk/wizard/theme/customise</p>
+<p>The CSS file included on the user's website is generated from two files:</p>
+<ol>
+<li><a href="#defaultsscss">defaults.scss</a></li>
+<li><a href="#themescss">theme.scss</a></li>
+</ol>
+<p>The user's overrides for colours, fonts and options are injected as SASS
+variables in between (1.) and (2.).</p>
+<p>See the <a href="../configfiles/themejson/#variables">documentation about the
+theme.json</a> for instructions for setting the
+variables users can alter in the online theme editor.</p>
+<h2 id="defaultsscss">defaults.scss</h2>
+<p>This file should contain any variables that users might overwrite in the online
+theme editor.</p>
+<p>For example, if in your <code>theme.json</code> file you have defined the colour
+<code>bodyFont</code>:</p>
+<pre><code>  {
+    "meta":{
+      "name":"My Demo Theme"
+    },
+    "variables":{
+      "colours":[
+        {
+          "id":"bodyFont",
+          "name":"Body Font Colour"
+        }
+      ]
+    }
+
+  }
+</code></pre>
+<p>You might set it to be <code>blue</code> as a default. If the user selects an alternative
+colour, <code>$bodyFont</code> will be overwritten.</p>
+<p>Your <code>defaults.scss</code> would include:</p>
+<pre><code>$bodyFont: blue;
+</code></pre>
+<h2 id="themescss">theme.scss</h2>
+<p>The theme.scss is the main entry point for your theme.
+In order to keep your scss file structure simple, we recommend that you keep
+this file small and include other SCSS files for each section of the website.</p>
+<p>For example:</p>
+<pre><code>// My Demo theme: theme.scss
+
+
+@import 'foundation'; // import the foundation framework
+
+// set some styles for the html tag
+html {
+  margin: 0;
+  height: 100%;
+}
+
+// import all of the subsections
+
+@import 'navigation'; // this assumes you have another file
+//  'navigation.scss' in the same folder
+
+@import 'headers'; // styles for the header tags
+</code></pre>
+<h1 id="included-libraries">Included Libraries</h1>
+<p>SiteChef bundles three external libraries which should not be added to the
+<code>scss/</code> folder. They can all be accessed by the <code>@import</code> statement:</p>
+<h2 id="bourbon">Bourbon</h2>
+<p><a href="http://bourbon.io/docs/">Bourbon</a> is a SASS mixin library that simplifies
+repitious css generation like vendor-prefixing</p>
+<p>The current Bourbon version used by SiteChef is <code>4.1.0</code></p>
+<p>eg.</p>
+<pre><code>@import 'bourbon';
+p {
+  @include box-sizing(border-box);
+}
+</code></pre>
+<p>will generate the following css</p>
+<pre><code>p {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+</code></pre>
+<h2 id="foundation">Foundation</h2>
+<p><a href="http://foundation.zurb.com/docs/">Foundation</a> is a frontend css framework that
+simplifies the creation of responsive websites that work across multiple screen
+dimensions.</p>
+<p>SiteChef only bundles the SCSS for Foundation so if you plan to use their
+frontend javascript functionality, make sure to add their scripts to the
+<code>dist/js/</code> folder in your theme.</p>
+<p>The current version of Foundation used by SiteChef is <code>5.5.2</code></p>
+<p>To import foundation:</p>
+<pre><code>@import 'foundation';
+// override any of the default foundation
+// settings
+$button-font-family: 'Verdana';
+</code></pre>
+<h2 id="bootstrap">Bootstrap</h2>
+<p><a href="http://getbootstrap.com/getting-started/">Bootstrap</a> is aguably the most
+popular frontend css framework. Like <a href="#foundation">Foundation</a>, it also speeds
+up the development process when creating responsive websites and saves time when
+styling form elements and alerts.</p>
+<p>Like Foundation, SiteChef does not automatically bundle Bootstrap's frontend
+javascipt files, so remember to save them to the <code>dist/js</code> folder before
+publishing your theme.</p>
+<p>The current version of Bootstrap Sass used by SiteChef is <code>3.3.3</code></p>
+<p>To import bootstrap:</p>
+<pre><code>@import 'bootstrap';
+</code></pre>
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../assetpipeline/" class="btn btn-neutral float-right" title="Compiling Frontend Assets"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../templating/" class="btn btn-neutral" title="HTML Templating"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using <a href="https://github.com/snide/sphinx_rtd_theme">this theme</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      <span><a href="../templating/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../assetpipeline/" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51231189-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

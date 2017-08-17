@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Resizer</title>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="icon" type="image/png" href="../../img/favicon.png">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <style>
+    body {font-size: 90%;}
+    pre, code {font-size: 100%;}
+    h3, h4, h5, h6 {color: #6A6A6A; font-weight: 300}
+  </style> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SiteChef Theme Documentation</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+        <span>General Use</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../..">Introduction & QuickStart</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../installation/">Installation</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../structure/">Theme Structure</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../templating/">HTML Templating</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../scss/">Stylesheets</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../assetpipeline/">Compiling Frontend Assets</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../datastructure/">Data Structure</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../frontendapi/">Frontend API Overview</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../publishing/">How to Publish Your Theme</a>
+                    
+                </li>
+            
+        
+
+    
+        
+        <span>Config Files</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../configfiles/sitechefrc/">.sitechefrc</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../../configfiles/themejson/">theme.json</a>
+                    
+                </li>
+            
+        
+
+    
+        
+        <span>Frontend Library Reference</span>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../">Overview</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../analytics/">Analytics</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../carouselgallery/">Carousel Gallery</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../clevercrop/">JQuery CleverCrop</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../heightfix/">Height Fix</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../historyscroll/">History Scroll</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../html5video/">HTML5 Video</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../imagerotator/">Image Rotator</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../imageloader/">Image Loader</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../newsletter/">Newsletter</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 current">
+                    <a class="current" href="./">Resizer</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#resizer">Resizer</a></li>
+                            
+                                <li><a class="toctree-l3" href="#basic-usage">Basic Usage</a></li>
+                            
+                                <li><a class="toctree-l3" href="#options">Options</a></li>
+                            
+                        
+                        </ul>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../simpleparallax/">Simple Parallax</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../screenheight/">Screen Height</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../styleddropdown/">Styled Dropdown</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../striploader/">Strip Loader</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../swipes/">Swipes</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../twitter/">Twitter</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../videoclick/">Video Click</a>
+                    
+                </li>
+            
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../.."></a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Theme Documentation</a> &raquo;</li>
+    <li>Resizer</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section resizer">
+              <h1 id="resizer">Resizer</h1>
+<p>The resizer dynamically resizes
+any items to fit within a parent container</p>
+<p>By default this container is the window.</p>
+<p><em>This is especially useful for dynamically resizing
+images for full-screen galleries</em></p>
+<h2 id="basic-usage">Basic Usage</h2>
+<p>Require the resizer library and instantiate it.</p>
+<p><em>If the HTML attribute <code>data-ratio</code> exists, it will use this ratio
+(item height / item width) to calculate the resized dimensions</em></p>
+<p>HTML:</p>
+<pre><code>&lt;div class="image-container" style="width:500px,height:400px"&gt;
+  &lt;img class="child-image" data-ratio="1.4"&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Javascript:</p>
+<pre><code>// import the resizer library (using browserify)
+var Resizer = require('../lib/Resizer.coffee');
+
+// instantiate with options
+var imageResize = new Resizer($('.child-image'),
+  {
+    sizeReference: $('.image-container')
+  }
+);
+</code></pre>
+<h2 id="options">Options</h2>
+<pre><code>var myResizer = new Resizer($('.item-to-be-resized'),
+  {
+    // the element that constrains our resize target
+    sizeReference: $(window),
+
+    // number of pixels to offset
+    // resize target from 'sizeReference' dimensions
+    padding:{
+      top: 0 // usually pixels
+      left: 10
+      bottom: function(){
+        // but can be a function returning integer
+        return 40;
+      },
+      right: 0
+    },
+
+    // alignment within
+    // container
+    align:{
+      // should alignment be applied
+      apply: true,
+
+      // vertical alignment:
+      // top|middle|bottom
+      vertical: 'middle',
+
+      // horizontal alignment:
+      // left|center|right
+      horizontal: 'right'
+    },
+
+    // resize after window `onResize` event
+    bindToResize: true,
+
+    // number of ms to debounce after window resize
+    debounce: 200,
+
+    // callback called after resize of target
+    resizedCallback: function(dimensions, $element){
+      // dimensions = {
+      // width: {Integer} width of element
+      // height: {Integer} height of element
+      // top: {Integer} margin-top offset from container
+      // left: {Integer} margin-top offset from container
+      //}
+    },
+
+    // ensure width/height dont fall
+    // below these minimums
+    min: {
+      width: 400, // integer value or false
+      height: 100 // integer value or false
+    },
+
+    // ensure width/height dont go
+    // above these maximums
+    max: {
+      width: 4000, // integer value or false
+      height: 1000 // integer value or false
+    },
+
+  }
+);
+</code></pre>
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../simpleparallax/" class="btn btn-neutral float-right" title="Simple Parallax"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../newsletter/" class="btn btn-neutral" title="Newsletter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using <a href="https://github.com/snide/sphinx_rtd_theme">this theme</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      <span><a href="../newsletter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../simpleparallax/" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51231189-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
