@@ -341,7 +341,7 @@ The following Nunjucks features will **not work in production** on the backend:
 
 ###[asyncAll](http://mozilla.github.io/nunjucks/templating.html#asyncall)
 
-###[raw](http://mozilla.github.io/nunjucks/templating.html#raw)
+###[raw](http://mozilla.github.io/nunjucks/templating.html#raw) - *Please use `safe` for cross-compatibility*
 
 ###[call](http://mozilla.github.io/nunjucks/templating.html#call)
 

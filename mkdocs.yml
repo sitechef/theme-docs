@@ -30,6 +30,8 @@ pages:
 - [libraries/twitter.md, Frontend Library Reference, Twitter]
 - [libraries/videoclick.md, Frontend Library Reference, Video Click]
 theme_dir: theme
-google_analytics: UA-51231189-4
+google_analytics:
+  - UA-51231189-4
+  - sitechef.co.uk
 copyright: SiteChef 2014
 site_dir: ../theme-output

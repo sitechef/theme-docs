@@ -34,7 +34,7 @@
 &nbsp; [menuChildren](#menu-array) `array`      *If the current page has children, they are listed here - useful for submenus*
 &nbsp; [content](#content-struct) `struct`          *data about the current page*
 &nbsp; [voucher](#voucher-struct) `struct`          *data about the current voucher (only available through `voucher.html` and `voucherEmail.html` template entrypoints)*
-&nbsp; [emailSettings](#email-settings-struct) `struct`          *data about the current voucher (only available through `voucherEmail.html` template entrypoints)*
+&nbsp; [emailSettings](#email-settings-struct) `struct`    *data about the current voucher (only available through `voucherEmail.html` template entrypoints)*
 
 **}**
 
@@ -420,14 +420,14 @@
 ####The data for templating `voucher.html` and `voucherEmail.html`
 
 **{**
-&nbsp;  id `int`                    *System id for voucher*
-&nbsp;  price `float`              *Price of the voucher*
-&nbsp;  currency `string`        *3 letter currency code*
-&nbsp;  senderName `string`        *Name of the voucher sender*
-&nbsp;  addressee `string`        *Person to whom voucher is being given*
-&nbsp;  message `string`        *Message on voucher*
-&nbsp;  code `string`        *Voucher code that can be used in the restaurant for redeeming the voucher*
-&nbsp;  webHash `string`        *Long, random identifier of the voucher (for generating url for voucher) - would be <domain>/voucher/<webHash>*
+&nbsp;  id `int`           *System id for voucher*
+&nbsp;  price `float`      *Price of the voucher*
+&nbsp;  currency `string`  *3 letter currency code*
+&nbsp;  senderName `string`*Name of the voucher sender*
+&nbsp;  addressee `string` *Person to whom voucher is being given*
+&nbsp;  message `string`   *Message on voucher*
+&nbsp;  code `string`      *Voucher code that can be used in the restaurant for redeeming the voucher*
+&nbsp;  webHash `string`   *Long, random identifier of the voucher (for generating url for voucher) - would be <domain>/voucher/<webHash>*
 **}**
 
 ##Email Settings Struct
@@ -435,9 +435,9 @@
 ####The global settings for sending voucher emails
 
 **{**
-&nbsp;  purchasedMessage `string`        *Message from staff in email, e.g 'Thank you for buying a voucher from us'*
-&nbsp;  senderEmail `string`        *Email address email will be sent from *
-&nbsp;  senderName `string`        *Name of the email address it will be sent from*
+&nbsp;  purchasedMessage `string` *Message from staff in email, e.g 'Thank you for buying a voucher from us'*
+&nbsp;  senderEmail `string`      *Email address email will be sent from *
+&nbsp;  senderName `string`       *Name of the email address it will be sent from*
 **}**
 
 
