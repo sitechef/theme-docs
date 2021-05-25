@@ -1,9 +1,9 @@
-#Styled Dropdown
+# Styled Dropdown
 
 Uses `ul` tag to create a styleable dropdown
 as a replacement to a standard html select
 
-##Usage
+## Usage
 
 Require the javascipt *after JQuery*
 
@@ -54,7 +54,7 @@ SCSS:
         }
 
 
-##Asynchronously Loaded Dropdowns
+## Asynchronously Loaded Dropdowns
 
 The styled dropdown script exports the function `$.styledDropdowns` to the jQuery object
 

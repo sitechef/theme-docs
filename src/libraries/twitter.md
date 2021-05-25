@@ -1,11 +1,11 @@
-#Twitter
+# Twitter
 
 Loads and templates a users' twitter feed
 
 
 *N.B. requires `jQuery`, `lodash`, `nunjucks.slim.min` and `moment.js`*
 
-##Usage
+## Usage
 
 Destination HTML:
 *(Where tweets will be appended)*
@@ -13,7 +13,7 @@ Destination HTML:
         <div class="latest-tweets"></div>
 
 Twitter Template `twitter.html`
-*(Must be included in the [frontend template list](../assetpipeline.md#frotnend-templates))*
+*(Must be included in the [frontend template list](../assetpipeline.md# frotnend-templates))*
 
         {#
          Template to be used on frontend
@@ -42,7 +42,7 @@ JS:
 
     twitter = new Twitter($('.latest-tweets'));
 
-##Data Structure
+## Data Structure
 
 The data structure for each tweet is the same
 as [the official twitter tweet structure](https://dev.twitter.com/overview/api/tweets), however two fields are added:
@@ -72,7 +72,7 @@ Example data for the template is:
         }
 
 
-##Options
+## Options
 
         var options = {
             // path of the frontend template

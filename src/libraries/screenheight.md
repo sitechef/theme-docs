@@ -1,4 +1,4 @@
-#ScreenHeight
+# ScreenHeight
 
 Fixes an element to a percentage of the
 screen height.
@@ -7,7 +7,7 @@ Useful for a horizontal strip which must always
 be 30% of the screen height.
 
 
-##Usage
+## Usage
 
 HTML:
 
@@ -36,7 +36,7 @@ JS:
     );
 
 
-##Options
+## Options
 
 The ScreenHeight library can be customised to
 to set min and max height, disable on desktop/mobile

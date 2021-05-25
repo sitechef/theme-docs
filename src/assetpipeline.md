@@ -1,4 +1,4 @@
-#Generating Production Assets
+# Generating Production Assets
 
 By default, most SiteChef themes come with a ready-made
 [Gulp](http://gulpjs.com/) asset pipeline which is automatically
@@ -10,13 +10,13 @@ desktop notifier.
 ***N.B. if you have not recently executed `sitechef serve`, remember to run
 `gulp` before `sitechef publish` to ensure that your assets are compiled***
 
-#Configuration
+# Configuration
 
 The configuration for which assets are compiled is contained in `gulpfile.js`
 and imports different scripts from the `gulpTasks/` directory.
 
 
-##Javascript
+## Javascript
 
 To keep frontend code reusable and modular, default themes on SiteChef come
 setup with a [Browserify](http://browserify.org/) pipeline.
@@ -30,7 +30,7 @@ The default entry point for compilation is `js/app.js`
 
 The compilation process can be altered in `gulpTasks/gulp-js.js`
 
-###Browserify
+### Browserify
 
 With Browserify one can import a module into a script with the CommonJS syntax:
 
@@ -59,7 +59,7 @@ This can now be used in `app.js` like follows:
 
 
 
-##Coffeescript
+## Coffeescript
 
 Most [SiteChef modules](libraries/index.md) are written in
 [Coffeescript](http://coffeescript.org/) and are
@@ -75,7 +75,7 @@ The default entrypoint is `coffee/app.coffee' and files are compiled to
 `gulpfile.js` otherwise your `app.js` may be overwritten***
 
 
-##SCSS
+## SCSS
 
 SASS/SCSS is only compiled for the purposes of previewing your theme locally using
 `sitechef serve`. The production stylesheets are compiled on the SiteChef
@@ -89,7 +89,7 @@ The configuration file for compiling SCSS is by default `gulpTasks/gulp-sass.js`
 
 This should not require modification.
 
-##Frontend Templates
+## Frontend Templates
 
 Backend html templates can be used on the frontend by compiling them to
 javascript.

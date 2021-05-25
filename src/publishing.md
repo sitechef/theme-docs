@@ -1,4 +1,4 @@
-#Publish Your Theme
+# Publish Your Theme
 
 Before publishing your theme, ensure that all pages load correctly without
 javascript or css errors.

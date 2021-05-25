@@ -66,6 +66,11 @@
                 </li>
             
                 <li class="toctree-l1 ">
+                    <a class="" href="updatingData/">Updating Data</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
                     <a class="" href="structure/">Theme Structure</a>
                     
                 </li>
@@ -258,14 +263,17 @@ This <a href="https://github.com/sitechef/theme-docs">documentation</a> and the
 welcome any contributions.</p>
 <h1 id="quickstart">Quickstart</h1>
 <ol>
-<li>Install <a href="./nodejs.org/download">Node.js</a></li>
-<li>Install the SiteChef command line utility <code>npm install sitechef -g</code></li>
-<li>Clone your theme to a local directory
+<li>install <a href="./nodejs.org/download">node.js</a></li>
+<li>install <a href="https://classic.yarnpkg.com/en/docs/install">yarn 1.x</a></li>
+<li>install <a href="https://github.com/nvm-sh/nvm/blob/master/readme.md# installing-and-updating">nvm</a></li>
+<li>set the node version to <code>8.2.1</code> - this is a requirement until we are able to successfully upgrade the <code>sitechef-cli</code></li>
+<li>install the sitechef command line utility <code>yarn global add sitechef</code></li>
+<li>clone your theme to a local directory
   <code>sitechef init [your-api-key] [optional directory name]</code>
   eg: <code>sitechef init 999999999888888</code></li>
-<li>Move to your directory (<code>cd [your-directory]</code>) and run the local server <code>sitechef serve</code></li>
-<li>View your theme hosted locally at <a href="http://localhost:3999/">http://localhost:3999/</a></li>
-<li>When you are happy with your changes, publish your theme back to SiteChef with <code>sitechef publish</code></li>
+<li>move to your directory (<code>cd [your-directory]</code>) and run the local server <code>sitechef serve</code></li>
+<li>view your theme hosted locally at <a href="http://localhost:3999/">http://localhost:3999/</a></li>
+<li>when you are happy with your changes, publish your theme back to sitechef with <code>sitechef publish</code></li>
 </ol>
             </div>
           </div>

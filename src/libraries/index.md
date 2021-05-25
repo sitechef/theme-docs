@@ -8,9 +8,9 @@ SiteChef-hosted site.
 If you have any questions please get in touch at [dev@sitechef.co.uk](MAILTO:dev@sitechef.co.uk)
 
 
-#Library Index
+# Library Index
 
-##Images/Video
+## Images/Video
 
 1. [**ImageLoader**](imageloader.md) -- Removes loading spinner and lazy-loads
     images
@@ -33,7 +33,7 @@ If you have any questions please get in touch at [dev@sitechef.co.uk](MAILTO:dev
    a delay between child elements. If element is a video, waits for video to
    end.
 
-##Frontend Templating
+## Frontend Templating
 
 1. [**StripLoader**](striploader.md) -- Asynchronously loads 'strips' for
    a horizontal scrolling website. Great for making a 'single page' website with
@@ -41,13 +41,13 @@ If you have any questions please get in touch at [dev@sitechef.co.uk](MAILTO:dev
    [www.rabbit-restaurant.com](http://www.rabbit-restaurant.com/) for and
    example
 
-##Navigation
+## Navigation
 
 1. [**HistoryScroll**](historyscroll.md) -- Scrolls to a 'strip' and changes
    HTML5 History. *Integrates with
    [StripLoader](striploader.md)*
 
-##Integration With 3rd Party Services
+## Integration With 3rd Party Services
 
 1. [**Analytics**](analytics.md) -- Listens to clicks to any anchor and
    registers it with Google Analyitcs
@@ -58,7 +58,7 @@ If you have any questions please get in touch at [dev@sitechef.co.uk](MAILTO:dev
 3. [**Twitter**](twitter.md) -- Dynamically loads a user's twitter feed
    via the SiteChef Twitter integration
 
-##DOM Utilities
+## DOM Utilities
 
 1. [**Swipes**](swipes.md) -- Provides swipe/drag/touch functionality
 

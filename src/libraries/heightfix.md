@@ -1,11 +1,11 @@
-#Height Fix
+# Height Fix
 
 For creating responsive elements where the height
 scales proportionately to screen width.
 
 *Useful for creating squares that fit screen width perfectly*
 
-##Usage
+## Usage
 
 Given the following html:
 
@@ -40,7 +40,7 @@ stay square as the screen resizes:
          );
 
 
-##Options
+## Options
 
 Following options are available
 

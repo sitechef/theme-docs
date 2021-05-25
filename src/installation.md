@@ -1,12 +1,23 @@
 # Installing The SiteChef CLI
 
-1. Install [Node.js](nodejs.org/download)
-2. Install the SiteChef command line utility `npm install sitechef -g`
-3. Clone your theme to a local directory
+
+1. install [node.js](nodejs.org/download)
+2. install [yarn 1.x](https://classic.yarnpkg.com/en/docs/install)
+3. install [nvm](https://github.com/nvm-sh/nvm/blob/master/readme.md#installing-and-updating)
+4. set the node version to `8.2.1` - this is a requirement until we are able to successfully upgrade the `sitechef-cli`
+5. install the sitechef command line utility `yarn global add sitechef`
+6. clone your theme to a local directory
   `sitechef init [your-api-key] [optional directory name]`
   eg: `sitechef init 999999999888888`
-  (see [below](#generate-an-api-key-for-a-theme) for more info)
-4. Move to your directory (`cd [your-directory]`) and run the local server `sitechef serve`
+
+# Setting up an existing theme
+
+If you have cloned a theme from github and the `package.json` does not
+already have a script for installing it you should run
+
+```
+sitechef setup <your api key>
+```
 
 # Generate an API key for a theme
 

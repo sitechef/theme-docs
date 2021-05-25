@@ -1,11 +1,11 @@
-#Newsletter
+# Newsletter
 
 Binds a form to submit emails to a Mailchimp list
 
 *Requires parsley.js for checking form input*
 
 
-##Usage
+## Usage
 
 HTML:
 
@@ -28,8 +28,8 @@ JS:
      var Newsletter = require('./Newsletter');
      // instantiate the Newsletter class
      var newsletter = new Newsletter(
-       $('#newsletter-form'), // jQ element of form
-       $('#newsletter-thanks'), // jQ element of thanks message
-       $('#newsletter-sending') // jQ element of signup
+       $('# newsletter-form'), // jQ element of form
+       $('# newsletter-thanks'), // jQ element of thanks message
+       $('# newsletter-sending') // jQ element of signup
      );
 

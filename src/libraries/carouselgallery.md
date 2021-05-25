@@ -1,4 +1,4 @@
-#CarouselGallery
+# CarouselGallery
 
 Generates a carousel gallery which rotates
 through a series of images/video
@@ -14,7 +14,7 @@ the next item in the carousel
 from a series of children of an element*
 
 
-##Usage
+## Usage
 
 HTML:
 
@@ -79,7 +79,7 @@ JS:
        });
 
 
-##Advanced Options
+## Advanced Options
 
 The CarouselGallery library can
 be configured by passing any of the

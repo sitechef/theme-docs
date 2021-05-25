@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Frontend API Overview</title>
+  <title>Updating Data</title>
   
 
   
@@ -55,8 +55,15 @@
                     
                 </li>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../updatingData/">Updating Data</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href="./">Updating Data</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#updating-data">Updating Data</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
@@ -85,28 +92,8 @@
                     
                 </li>
             
-                <li class="toctree-l1 current">
-                    <a class="current" href="./">Frontend API Overview</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#json-api">JSON Api</a></li>
-                            
-                        
-                            <li class="toctree-l2"><a href="#endpoints">Endpoints</a></li>
-                            
-                                <li><a class="toctree-l3" href="#apimediaitem_id-get">/api/media/{item_id} GET</a></li>
-                            
-                                <li><a class="toctree-l3" href="#apicategorypage_id-get">/api/category/{page_id} GET</a></li>
-                            
-                                <li><a class="toctree-l3" href="#apiblogpostpost_id-get">/api/blogpost/{post_id} GET</a></li>
-                            
-                                <li><a class="toctree-l3" href="#apistreamsinstagram-get">/api/streams/instagram GET</a></li>
-                            
-                                <li><a class="toctree-l3" href="#apimailchimpsubscribesite_id-post">/api/mailchimp/subscribe/{site_id} POST</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l1 ">
+                    <a class="" href="../frontendapi/">Frontend API Overview</a>
                     
                 </li>
             
@@ -250,7 +237,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="..">Theme Documentation</a> &raquo;</li>
-    <li>Frontend API Overview</li>
+    <li>Updating Data</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -258,55 +245,30 @@
   <hr/>
 </div>
           <div role="main">
-            <div class="section frontend-api-overview">
-              <h1 id="json-api">JSON Api</h1>
-<p>All SiteChef websites have a JSON api that is available via standard AJAX requests</p>
-<p>They are available by the endpoint <code>/api/</code></p>
-<h1 id="endpoints">Endpoints</h1>
-<h2 id="apimediaitem_id-get"><code>/api/media/{item_id}</code> GET</h2>
-<p>Fetches data about a a particular item</p>
-<h3 id="parameter-item_id-int-id-of-item">Parameter item_id <code>int</code> <em>id of item</em></h3>
-<h3 id="returns-item-struct">Returns <a href="../datastructure/# item-struct">Item Struct</a></h3>
-<h2 id="apicategorypage_id-get"><code>/api/category/{page_id}</code> GET</h2>
-<p>Fetches data for a particular page</p>
-<h3 id="parameter-page_id-int-id-of-page">Parameter page_id <code>int</code> <em>id of page</em></h3>
-<h3 id="returns-content-struct">Returns <a href="../datastructure/# content-struct">Content Struct</a></h3>
-<h2 id="apiblogpostpost_id-get"><code>/api/blogpost/{post_id}</code> GET</h2>
-<p>Fetches data for a particular page</p>
-<h3 id="parameter-post_id-int-id-of-post">Parameter post_id <code>int</code> <em>id of post</em></h3>
-<h3 id="returns-blog-post-struct">Returns <a href="../datastructure/# blog-post-struct">Blog Post Struct</a></h3>
-<h2 id="apistreamsinstagram-get"><code>/api/streams/instagram</code> GET</h2>
-<p>Fetches user's instagram feed</p>
-<h3 id="parameter-post_id-int-id-of-post_1">Parameter post_id <code>int</code> <em>id of post</em></h3>
-<h3 id="returns-array-item-struct-item-struct">Returns <code>array</code> [<a href="../datastructure/# item-struct">Item Struct</a>, <a href="../datastructure/# item-struct">Item Struct</a>, ...]</h3>
-<h2 id="apimailchimpsubscribesite_id-post"><code>/api/mailchimp/subscribe/{site_id}</code> POST</h2>
-<p>Adds a visitor to the SiteChef user's mailchimp list</p>
-<h3 id="request-body">Request Body</h3>
-<p>The body variables are as set by the mailchimp user.
-By default they are:</p>
-<pre><code>{
-    "FNAME":"&lt;FirstName&gt;",
-    "LNAME":"&lt;LastName&gt;",
-    "LNAME":"&lt;LastName&gt;"
-}
-</code></pre>
-<h3 id="parameter-post_id-int-site-id">Parameter post_id <code>int</code> <em>site id</em></h3>
-<h3 id="returns-object">Returns <code>object</code></h3>
-<pre><code>{
-    "succes": true, //boolean
-    "errors":[] // any errors
-}
-</code></pre>
+            <div class="section updating-data">
+              <h1 id="updating-data">Updating Data</h1>
+<p>As you are working, it is very likely that you will be
+making changes at <code>admin.sitechef.co.uk</code> at the same time
+as you are changing your code locally.</p>
+<p>If you want to update your local code with data from the server:</p>
+<ol>
+<li>Create a <code>JSON snapshot</code> on at <code>admin.sitechef.co.uk</code> by navigating to 
+    <a href="https://admin.sitechef.co.uk/wizard/theme">Theme Manager</a>
+    and clicking <code>Generate JSON Snapshot</code></li>
+<li>Once this is complete run <code>sitechef update</code> at the root of your project</li>
+<li>If you were running <code>sitechef serve</code> at the time, this will need to be 
+    run again to be up-to-date with the latest data</li>
+</ol>
             </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../publishing/" class="btn btn-neutral float-right" title="How to Publish Your Theme"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../structure/" class="btn btn-neutral float-right" title="Theme Structure"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../datastructure/" class="btn btn-neutral" title="Data Structure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -332,8 +294,8 @@ By default they are:</p>
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../datastructure/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../publishing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../structure/" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 <script>

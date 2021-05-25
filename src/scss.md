@@ -2,7 +2,7 @@ SiteChef uses [SASS](http://www.sass-lang.com) to generate CSS.
 SCSS files are currently compiled using version `3.1.2` of node-sass
 
 
-#Writing SCSS/SASS
+# Writing SCSS/SASS
 
 See the [SASS website](http://www.sass-lang.com/guide) for a full SASS guide.
 
@@ -10,13 +10,13 @@ There are two variants of SASS: `scss` which is not indented and follows the
 conventions of css more closely and `sass` which is indented, but arguably
 faster to write
 
-#Important Variables
+# Important Variables
 
 In order to link your production assets (images, fonts, etc)
 with your production stylesheet it is important that you use our inbuilt
 variables when specifying asset paths
 
-###1. `imageUrl(<your-image.png>)`
+### 1. `imageUrl(<your-image.png>)`
 
 If you want to refer to any images in your `dist/img/` folder in your SCSS files
 use the SASS shorthand function `imageUrl()` and inside the path of the image
@@ -36,7 +36,7 @@ when in production will render to
       top center no-repeat;
     }
 
-###2. `$assetsRoot`
+### 2. `$assetsRoot`
 
 This is a string of the absolute root of your `dist/` folder when in production.
 
@@ -64,7 +64,7 @@ will render in production to
     }
 
 
-#Compilation
+# Compilation
 
 CSS Stylesheets are generated from the SCSS files in the `scss/` directory.
 
@@ -73,17 +73,17 @@ selected at https://admin.sitechef.co.uk/wizard/theme/customise
 
 The CSS file included on the user's website is generated from two files:
 
-1. [defaults.scss](#defaultsscss)
-2. [theme.scss](#themescss)
+1. [defaults.scss](# defaultsscss)
+2. [theme.scss](# themescss)
 
 The user's overrides for colours, fonts and options are injected as SASS
 variables in between (1.) and (2.).
 
 See the [documentation about the
-theme.json](configfiles/themejson.md#variables) for instructions for setting the
+theme.json](configfiles/themejson.md# variables) for instructions for setting the
 variables users can alter in the online theme editor.
 
-##defaults.scss
+## defaults.scss
 
 This file should contain any variables that users might overwrite in the online
 theme editor.
@@ -113,7 +113,7 @@ Your `defaults.scss` would include:
 
     $bodyFont: blue;
 
-##theme.scss
+## theme.scss
 
 The theme.scss is the main entry point for your theme.
 In order to keep your scss file structure simple, we recommend that you keep
@@ -140,12 +140,12 @@ For example:
     @import 'headers'; // styles for the header tags
 
 
-#Included Libraries
+# Included Libraries
 
 SiteChef bundles three external libraries which should not be added to the
 `scss/` folder. They can all be accessed by the `@import` statement:
 
-##Bourbon
+## Bourbon
 
 [Bourbon](http://bourbon.io/docs/) is a SASS mixin library that simplifies
 repitious css generation like vendor-prefixing
@@ -168,7 +168,7 @@ will generate the following css
       box-sizing: border-box;
     }
 
-##Foundation
+## Foundation
 
 [Foundation](http://foundation.zurb.com/docs/) is a frontend css framework that
 simplifies the creation of responsive websites that work across multiple screen
@@ -187,10 +187,10 @@ To import foundation:
     // settings
     $button-font-family: 'Verdana';
 
-##Bootstrap
+## Bootstrap
 
 [Bootstrap](http://getbootstrap.com/getting-started/) is aguably the most
-popular frontend css framework. Like [Foundation](#foundation), it also speeds
+popular frontend css framework. Like [Foundation](# foundation), it also speeds
 up the development process when creating responsive websites and saves time when
 styling form elements and alerts.
 

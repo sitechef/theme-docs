@@ -1,4 +1,4 @@
-#SimpleParallax
+# SimpleParallax
 
 Adds a parallax affect to an element or a collection of elements
 
@@ -6,7 +6,7 @@ Uses `window.requestAnimationFrame` and sets the transform
 `translateY` to try and maximise smoothness
 
 
-#Usage
+# Usage
 
 HTML:
 

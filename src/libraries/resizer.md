@@ -1,4 +1,4 @@
-#Resizer
+# Resizer
 
 The resizer dynamically resizes
 any items to fit within a parent container
@@ -8,7 +8,7 @@ By default this container is the window.
 *This is especially useful for dynamically resizing
 images for full-screen galleries*
 
-##Basic Usage
+## Basic Usage
 
 Require the resizer library and instantiate it.
 
@@ -34,7 +34,7 @@ Javascript:
       }
     );
 
-##Options
+## Options
 
 
     var myResizer = new Resizer($('.item-to-be-resized'),

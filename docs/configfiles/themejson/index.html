@@ -56,6 +56,11 @@
                 </li>
             
                 <li class="toctree-l1 ">
+                    <a class="" href="../../updatingData/">Updating Data</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
                     <a class="" href="../../structure/">Theme Structure</a>
                     
                 </li>
@@ -253,20 +258,21 @@
 <h4 id="name">name</h4>
 <div class="indented">
 
-<p>The Main title for the theme. <em>This was set when you cloned the theme</em></p>
-</div>
+The Main title for the theme. *This was set when you cloned the theme*
 
+</div>
 <h4 id="description">description</h4>
 <div class="indented">
 
-<p>A short description about your theme. <em>This was set when you cloned the theme</em></p>
-</div>
+A short description about your theme. *This was set when you cloned the theme*
 
+</div>
 <h4 id="screenshot">screenshot</h4>
 <div class="indented">
 
-<p>The filename of an image in the <code>dist/img/</code> folder to be shown
-to SiteChef users on the admin section e.g. <code>myscreenshot.png</code></p>
+The filename of an image in the `dist/img/` folder to be shown
+to SiteChef users on the admin section e.g. `myscreenshot.png`
+
 </div>
 
 <h2 id="variables">"variables"</h2>
@@ -276,71 +282,84 @@ These variables are dynamically injected into your SCSS files and made
 available in your <code>theme.scss</code> file. See <a href="../../scss/">Stylesheets</a> for a more detailed explanation.</p>
 <p>It is broken down into three arrays: <code>variables</code>, <code>fonts</code> and <code>colours</code>.</p>
 <h4 id="variables_1">variables</h4>
-<p><div class="indented">
-Creates a dropdown in the theme customisation section.</p>
-<p>It is an array of objects with the following keys: <code>id</code>, <code>name</code>, <code>options</code></p>
-<pre><code>{
-    "id":"myOptionId", // the id to be used in SCSS: $myOptionId
-    "name":"My Option Title", // a description that the customer sees
-    "options":{ // a key:value hash of options
-        "stringAssigned":"Description in drop-down"
-        "anotherString":"Option 2"
+<div class="indented">
+Creates a dropdown in the theme customisation section.
+
+It is an array of objects with the following keys: `id`, `name`, `options`
+
+    {
+        "id":"myOptionId", // the id to be used in SCSS: $myOptionId
+        "name":"My Option Title", // a description that the customer sees
+        "options":{ // a key:value hash of options
+            "stringAssigned":"Description in drop-down"
+            "anotherString":"Option 2"
+        }
     }
-}
-</code></pre>
-<p>In the above example, the SiteChef user will be presented
+
+In the above example, the SiteChef user will be presented
 with a dropdown under the heading of "My Option Title"
 with two options "Description in drop-down" and "Option 2"
 If the user selects "Option 2", the following SCSS
-will be injected:</p>
-<pre><code>$myOptionId:'anotherString';
-</code></pre>
-</div>
+will be injected:
 
+    $myOptionId:'anotherString';
+
+
+</div>
 <h4 id="colours">colours</h4>
 <div class="indented">
 
-<p>Creates a colour selector in the theme customisation section</p>
-<p><img style="display:block" src="img/colour_selection.png"></p>
-<p>It is an array of objects with the keys: <code>id</code>, <code>name</code></p>
-<p>eg:</p>
-<pre><code>{
-  "id":"scssIdForColour",
-  "name":"Title For Customer"
-}
-</code></pre>
-<p>Once a user has selected the colour <code>#009922</code>, the following will be injected into
-the scss file:</p>
-<pre><code>$scssIdForColour: #009922;
-</code></pre>
-</div>
+Creates a colour selector in the theme customisation section
 
+<img style="display:block" src="img/colour_selection.png">
+
+It is an array of objects with the keys: `id`, `name`
+
+eg:
+
+    {
+      "id":"scssIdForColour",
+      "name":"Title For Customer"
+    }
+
+Once a user has selected the colour `# 009922`, the following will be injected into
+the scss file:
+
+    $scssIdForColour: # 009922;
+
+</div>
 <h4 id="fonts">fonts</h4>
 <div class="indented">
 
-<p>Creates a font dropdown in the theme customisation section</p>
-<p><img style="display:block" src="img/font_selection.png"></p>
-<p>Array of objects with keys : <code>id</code>, <code>name</code></p>
-<p>eg:</p>
-<pre><code>{
-  "id":"titleFont", # id for scss mixin
-  "name":"Title" # title that customer sees sees
-}
-</code></pre>
-<p>If the user selects the font "arial", "bold", 90%, uppercase,
+Creates a font dropdown in the theme customisation section
+
+<img style="display:block" src="img/font_selection.png">
+
+Array of objects with keys : `id`, `name`
+
+eg:
+
+    {
+      "id":"titleFont", # id for scss mixin
+      "name":"Title" # title that customer sees sees
+    }
+
+If the user selects the font "arial", "bold", 90%, uppercase,
 font-spacing 2px
-the scss will be injected with the following mixin:</p>
-<pre><code>@mixin titleFont($size){
-  font:{
-    family: 'arial';
-    style: normal;
-    weight: bold;
-    size: ($size * 0.9);
-  }
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-</code></pre>
+the scss will be injected with the following mixin:
+
+    @mixin titleFont($size){
+      font:{
+        family: 'arial';
+        style: normal;
+        weight: bold;
+        size: ($size * 0.9);
+      }
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+
 </div>
             </div>
           </div>

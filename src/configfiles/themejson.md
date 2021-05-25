@@ -1,4 +1,4 @@
-#The "theme.json" file
+# The "theme.json" file
 
 The `theme.json` contains the general settings for your theme.
 
@@ -8,19 +8,19 @@ It is a JSON formatted file with the two keys: `meta` and `variables`
 
 `meta` describes the theme for SiteChef users and uses the following keys:
 
-####name
+#### name
 <div class="indented">
 
 The Main title for the theme. *This was set when you cloned the theme*
 
 </div>
-####description
+#### description
 <div class="indented">
 
 A short description about your theme. *This was set when you cloned the theme*
 
 </div>
-####screenshot
+#### screenshot
 <div class="indented">
 
 The filename of an image in the `dist/img/` folder to be shown
@@ -37,7 +37,7 @@ available in your `theme.scss` file. See [Stylesheets](../scss.md) for a more de
 
 It is broken down into three arrays: `variables`, `fonts` and `colours`.
 
-####variables
+#### variables
 <div class="indented">
 Creates a dropdown in the theme customisation section.
 
@@ -62,7 +62,7 @@ will be injected:
 
 
 </div>
-####colours
+#### colours
 <div class="indented">
 
 Creates a colour selector in the theme customisation section
@@ -78,13 +78,13 @@ eg:
       "name":"Title For Customer"
     }
 
-Once a user has selected the colour `#009922`, the following will be injected into
+Once a user has selected the colour `# 009922`, the following will be injected into
 the scss file:
 
-    $scssIdForColour: #009922;
+    $scssIdForColour: # 009922;
 
 </div>
-####fonts
+#### fonts
 <div class="indented">
 
 Creates a font dropdown in the theme customisation section

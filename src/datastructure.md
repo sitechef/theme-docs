@@ -1,9 +1,9 @@
-#Data Structure
+# Data Structure
 
-##Core Data
+## Core Data
 
-####Every page is templated with the following data structure
-####You can view your theme data in your data snapshot file at `.sitechef/data.json`
+#### Every page is templated with the following data structure
+#### You can view your theme data in your data snapshot file at `.sitechef/data.json`
 
 
 **{**
@@ -23,30 +23,30 @@
 &nbsp;                          *`media` - a static page describing a user-uploaded image/video*
 &nbsp;                          *`post` - a static blog post *
 &nbsp;                          *`offer` - permalink page for a special offer*
-&nbsp; [preferences](#preferences-struct) `struct`     *list of user-set variables*
-&nbsp; [socialMedia](#socialmedia-array) `array`     *User social media links*
+&nbsp; [preferences](# preferences-struct) `struct`     *list of user-set variables*
+&nbsp; [socialMedia](# socialmedia-array) `array`     *User social media links*
 &nbsp; specialOffers `array`    *Special Offers:*
 &nbsp; [
-&nbsp;     [specialOffer](#special-offer-struct) `struct`         *Array of any valid special offers*
+&nbsp;     [specialOffer](# special-offer-struct) `struct`         *Array of any valid special offers*
 &nbsp; ]
-&nbsp; [meta](#meta-struct) `struct`            *user-specific configuration automatically generated*
-&nbsp; [menu](#menu-array) `array`              *the main site navigation hiearchy with nested children*
-&nbsp; [menuChildren](#menu-array) `array`      *If the current page has children, they are listed here - useful for submenus*
-&nbsp; [content](#content-struct) `struct`          *data about the current page*
-&nbsp; [voucher](#voucher-struct) `struct`          *data about the current voucher (only available through `voucher.html` and `voucherEmail.html` template entrypoints)*
-&nbsp; [emailSettings](#email-settings-struct) `struct`    *data about the current voucher (only available through `voucherEmail.html` template entrypoints)*
+&nbsp; [meta](# meta-struct) `struct`            *user-specific configuration automatically generated*
+&nbsp; [menu](# menu-array) `array`              *the main site navigation hiearchy with nested children*
+&nbsp; [menuChildren](# menu-array) `array`      *If the current page has children, they are listed here - useful for submenus*
+&nbsp; [content](# content-struct) `struct`          *data about the current page*
+&nbsp; [voucher](# voucher-struct) `struct`          *data about the current voucher (only available through `voucher.html` and `voucherEmail.html` template entrypoints)*
+&nbsp; [emailSettings](# email-settings-struct) `struct`    *data about the current voucher (only available through `voucherEmail.html` template entrypoints)*
 
 **}**
 
 
-##Preferences Struct
+## Preferences Struct
 
-####Preferences are user-generated options
+#### Preferences are user-generated options
 
 **{**
 &nbsp; currentTemplate `string`       *active template name*
-&nbsp; siteLogo `string`              *relative url of logo to [image root](#image-root)*
-&nbsp; siteLogo_2x `string`           *relative url of logo for retina to [image root](#image-root)*
+&nbsp; siteLogo `string`              *relative url of logo to [image root](# image-root)*
+&nbsp; siteLogo_2x `string`           *relative url of logo for retina to [image root](# image-root)*
 &nbsp; comingSoon `bool`              *whether or not the site is coming soon*
 &nbsp; restaurantName `string`
 &nbsp; restaurantDescription `string`
@@ -67,9 +67,9 @@
 &nbsp; facebook `string`              *facebook page url*
 **}**
 
-##SocialMedia Array
+## SocialMedia Array
 
-####Links to user's social media services
+#### Links to user's social media services
 
 **[**
 &nbsp;  *These are not always available and*
@@ -81,9 +81,9 @@
 &nbsp;  email `string`
 **]**
 
-##Meta Struct
+## Meta Struct
 
-####Server-generated user settings
+#### Server-generated user settings
 
 **{**
 &nbsp; favIcon `string`               *absolute path of the favicon*
@@ -100,17 +100,17 @@
 &nbsp;    **}**
 **}**
 
-##Menu Array
+## Menu Array
 
-####Nested site hierarchy for rendering the navigation
+#### Nested site hierarchy for rendering the navigation
 
 **[**
-&nbsp;  [Menu](#menu-struct) `struct`
+&nbsp;  [Menu](# menu-struct) `struct`
 **]**
 
-##Menu Struct
+## Menu Struct
 
-####A Cut-down version of the [Content Struct](#content-struct)
+#### A Cut-down version of the [Content Struct](# content-struct)
 
 **{**
 &nbsp;  id `int`             *id of page*
@@ -129,13 +129,13 @@
 &nbsp;    **}**
 &nbsp;  children `array`
 &nbsp;  **[**
-&nbsp;    [Menu](#menu-struct) `struct`
+&nbsp;    [Menu](# menu-struct) `struct`
 &nbsp;  **]**
 **}**
 
-##Content Struct
+## Content Struct
 
-####The core content for the current page
+#### The core content for the current page
 ####*Below descriptions are for pages of type `subcategory`|`root`*
 ####*-  other page types eg `post`|`offer` relate to their relevant struct*
 
@@ -151,7 +151,7 @@
 &nbsp;  **}**
 &nbsp;  items `array`
 &nbsp;  **[**
-&nbsp;      [Item](#item-struct) `struct`
+&nbsp;      [Item](# item-struct) `struct`
 &nbsp;  **]**
 &nbsp;  uri `string`                *the absolute path form site root eg `/gallery`*
 &nbsp;  url `string`                *slug for this page eg. 'gallery'*
@@ -172,7 +172,7 @@
 &nbsp;  showOnMobile `bool`         *display this page when viewed on mobile*
 &nbsp;  showInFooter `bool`         *display a link to this page in the page footer*
 &nbsp;  linkImage `string`          *absolute path of the image to use when external sites show a preview of this page*
-&nbsp;  [featuredImage](#item-struct) `struct`      *featured image for this section (Image)*
+&nbsp;  [featuredImage](# item-struct) `struct`      *featured image for this section (Image)*
 &nbsp;  htmlTitle `string`          *text for the brower tab title*
 &nbsp;  metaDescription `string`    *text for the meta description for the page*
 &nbsp;  lastUpdated `string`        *date formatted YYYY-MM-DD hh:ii:ss*
@@ -183,7 +183,7 @@
 &nbsp;  **}**
 &nbsp;  blogPosts `array`           *Only present when `format` is `1`*
 &nbsp;  **[**
-&nbsp;      [Blog Post](#blog-post-struct) `struct`
+&nbsp;      [Blog Post](# blog-post-struct) `struct`
 &nbsp;  **]**
 &nbsp;  blogPageTotal `int`         *Only present when `format` is `1` total number of blog pages*
 &nbsp;  prevBlogPage `string`|`false` *Only present when `format` is `1` url to previous blog page*
@@ -193,12 +193,12 @@
 &nbsp;      id `integer`
 &nbsp;      menus `array`
 &nbsp;      **[**
-&nbsp;        [meal](#meal-struct)                *A meal e.g. Breakfast*
+&nbsp;        [meal](# meal-struct)                *A meal e.g. Breakfast*
 &nbsp;      **]**
 &nbsp;  **}**
 &nbsp;  customFields `struct`    *key-value hash of custom data for this page*
 &nbsp;  **{**
-&nbsp;      fieldKey `string`: <fieldValue - mixed>  *data as described in customFieldDescriptions*
+&nbsp;      fieldKey `string`: <fieldValue - mixed>  *data as described in customFieldDescriptions -- see [Custom Field Struct](#custom-field-struct)*
 &nbsp;      ...
 &nbsp;  **}**
 &nbsp;  customFieldDescriptions `struct`    *key-value hash describing custom field types*
@@ -208,9 +208,9 @@
 &nbsp;  **}**
 **}**
 
-##Item Struct
+## Item Struct
 
-####Data for an image or video
+#### Data for an image or video
 
 **{**
 &nbsp;  id `int`                    *id of the item*
@@ -223,14 +223,14 @@
 &nbsp;                              *`vimeo`  - a vimeo video to embed*
 &nbsp;  tags `string`               *User-tagged data*
 &nbsp;  slug `string`               *url to static version of this item*
-&nbsp;  [image](#image-struct) `struct`     *Image Data*
-&nbsp;  [video](#video-struct) `struct`     *Youtube/Vimeo Metadata*
-&nbsp;  [videoData](#video-data-struct) `struct`     *[OPTIONAL] HTML5 Video Data*
+&nbsp;  [image](# image-struct) `struct`     *Image Data*
+&nbsp;  [video](# video-struct) `struct`     *Youtube/Vimeo Metadata*
+&nbsp;  [videoData](# video-data-struct) `struct`     *[OPTIONAL] HTML5 Video Data*
 **}**
 
-##Image Struct
+## Image Struct
 
-####Data for accessing different versions of images
+#### Data for accessing different versions of images
 
 **{**
 &nbsp;  large `struct`              *large image (max 1200px)*
@@ -257,9 +257,9 @@
 &nbsp;  **}**
 **}**
 
-##Video Struct
+## Video Struct
 
-####Data for embedding youtube/vimeo videos
+#### Data for embedding youtube/vimeo videos
 
 **{**
 &nbsp;  id `string`             *youtube|vimeo id*
@@ -269,24 +269,24 @@
 &nbsp;                            *`2` - HTML5*
 **}**
 
-##Video Data Struct
+## Video Data Struct
 
-####This is only available when item is an HTML5 video
+#### This is only available when item is an HTML5 video
 
 **{**
 &nbsp;  baseName `string`       *unique filename base*
 &nbsp;  versions `struct`       *available video versions*
 &nbsp;  **{**
-&nbsp;      [mp4High](#html5-struct) `struct`   *Best quality mp4*
-&nbsp;      [mobile](#html5-struct) `struct`    *low quality mp4*
-&nbsp;      [webM](#html5-struct) `struct`      *high quality webm*
-&nbsp;      [thumbnails](#html5-struct) `struct`  *auto-generated thumbnails*
+&nbsp;      [mp4High](# html5-struct) `struct`   *Best quality mp4*
+&nbsp;      [mobile](# html5-struct) `struct`    *low quality mp4*
+&nbsp;      [webM](# html5-struct) `struct`      *high quality webm*
+&nbsp;      [thumbnails](# html5-struct) `struct`  *auto-generated thumbnails*
 &nbsp;  **}**
 **}**
 
-##HTML5 Struct
+## HTML5 Struct
 
-####This is automatically generated by [Zencoder](https://app.zencoder.com/docs/api/outputs)
+#### This is automatically generated by [Zencoder](https://app.zencoder.com/docs/api/outputs)
 
 **{**
 &nbsp;  id `string`             *unique id for video*
@@ -312,14 +312,14 @@
 **}**
 
 
-##Special Offer Struct
+## Special Offer Struct
 
-####A Special Offer
+#### A Special Offer
 
 **{**
 &nbsp;  id `int`                    *blog post id*
 &nbsp;  slug `string`               *the url fragment for this offer*
-&nbsp;  [featuredImage](#item-struct) `struct`      *featured image for this section (Image)*
+&nbsp;  [featuredImage](# item-struct) `struct`      *featured image for this section (Image)*
 &nbsp;  title `string`              *Offer title*
 &nbsp;  description `string`        *Offer description*
 &nbsp;  tAndCs `string`             *HTML-formatted text for Terms And Conditions relating to offer*
@@ -331,19 +331,19 @@
 **}**
 
 
-##Blog Post Struct
+## Blog Post Struct
 
-####An individual blog post
+#### An individual blog post
 
 **{**
 &nbsp;  id `int`                    *blog post id*
 &nbsp;  body `string`               *raw body before widgets have been rendered*
 &nbsp;                              ***N.B. use `renderedBody` instead for templating***
 &nbsp;  category_id `int`           *the id of the parent page*
-&nbsp;  [featuredImage](#item-struct) `struct`      *featured image for this section (Image)*
+&nbsp;  [featuredImage](# item-struct) `struct`      *featured image for this section (Image)*
 &nbsp;  gallery `array`             *list of images for the gallery*
 &nbsp;   **[**
-&nbsp;      [Item](#item-struct) `struct`
+&nbsp;      [Item](# item-struct) `struct`
 &nbsp;   **]**
 &nbsp;  htmlTitle `string`          *text for the brower tab title*
 &nbsp;  metaDescription `string`    *text for the meta description for the page*
@@ -357,20 +357,20 @@
 &nbsp;  title `string`              *Blog title*
 &nbsp;  customFields `struct`    *key-value hash of custom data for this page*
 &nbsp;  **{**
-&nbsp;      fieldKey `string`: <fieldValue - mixed>  *data as described in customFieldDescriptions*
+&nbsp;      fieldKey `string`: [CustomFieldStruct](#custom-field-struct)  *The format of this struct is structured according to what is described in customFieldDescription*
 &nbsp;      ...
 &nbsp;  **}**
 &nbsp;  customFieldDescriptions `struct`    *key-value hash describing custom field types*
 &nbsp;  **{**
-&nbsp;      fieldKey `string`: <fieldValue - mixed>  *data as described in customFieldDescriptions*
+&nbsp;      fieldKey `string`: [CustomFieldDescription Struct](#custom-field-description-struct) *data as described in customFieldDescriptions*
 &nbsp;      ...
 &nbsp;  **}**
 &nbsp;  updatedAt `string`          *last saved date*
 **}**
 
-##Meal Struct
+## Meal Struct
 
-####One of the meal menus on a food menu page
+#### One of the meal menus on a food menu page
 
 **{**
 &nbsp;  id `int`                    *meal id*
@@ -382,7 +382,7 @@
 &nbsp;                              *`text` for free text*
 &nbsp;  courseOrder `array`        *list of courses if contentType `dishes`*
 &nbsp;   **[**
-&nbsp;      [Course](#course-struct) `struct`
+&nbsp;      [Course](# course-struct) `struct`
 &nbsp;   **]**
 &nbsp;  body `string`               *raw body text if contentType `text`*
 &nbsp;  timePeriod `string`         *`morning`, `afternoon`, `evening` `allday`*
@@ -390,9 +390,9 @@
 &nbsp;  updatedAt `string`          *last saved date*
 **}**
 
-##Course Struct
+## Course Struct
 
-####A section in a meal e.g "Starters"
+#### A section in a meal e.g "Starters"
 
 **{**
 &nbsp;  id `int`                    *course id*
@@ -400,13 +400,13 @@
 &nbsp;  description `string`        *course description - can contain HTML*
 &nbsp;  dishOrder `array`           *list of dishes in this course*
 &nbsp;   **[**
-&nbsp;      [Dish](#dish-struct) `struct`
+&nbsp;      [Dish](# dish-struct) `struct`
 &nbsp;   **]**
 **}**
 
-##Dish Struct
+## Dish Struct
 
-####An individual dish in a meal e.g "Poached Eggs"
+#### An individual dish in a meal e.g "Poached Eggs"
 
 **{**
 &nbsp;  id `int`                    *dish id*
@@ -415,9 +415,9 @@
 &nbsp;  price `string`              *price e.g. '£10.50' or '10.50' etc*
 **}**
 
-##Voucher Struct
+## Voucher Struct
 
-####The data for templating `voucher.html` and `voucherEmail.html`
+#### The data for templating `voucher.html` and `voucherEmail.html`
 
 **{**
 &nbsp;  id `int`           *System id for voucher*
@@ -430,9 +430,9 @@
 &nbsp;  webHash `string`   *Long, random identifier of the voucher (for generating url for voucher) - would be <domain>/voucher/<webHash>*
 **}**
 
-##Email Settings Struct
+## Email Settings Struct
 
-####The global settings for sending voucher emails
+#### The global settings for sending voucher emails
 
 **{**
 &nbsp;  purchasedMessage `string` *Message from staff in email, e.g 'Thank you for buying a voucher from us'*
@@ -441,3 +441,157 @@
 **}**
 
 
+## Custom Field Description Struct
+
+This struct describes the types that are to be expected in the `customField` section
+
+```typescript
+{
+    id: string; // the field key in the `customFields` 
+    description: string; // a human-readable description of the field
+    type: 'gallery' // an array of images
+        | 'image' // a single image
+        | 'checkbox' // a boolean
+        | 'text' // a simple string
+        | 'file' // a file struct
+        | 'formattedText' // a text string which is raw HTML
+        | 'complex' // an array of elements defined in `fields`
+    primaryField: string; // when the type is `complex` this is the field of the `fields` array which each result is indexed by
+    fields: [ // when type is `complex` we define an array of subfields which apply to each item in the list
+        {
+            id: string; // field key
+            description: string; // human readable description
+            type: 'text'| 'image' | 'formattedText' | 'checkbox' | 'gallery' | 'file'
+        }
+    ]
+
+}
+```
+
+## Custom Field Struct
+
+####  A flexible data format for custom data
+
+The corresponding data type for each custom field is defined in `customFieldDescriptions`. 
+
+The types are one of:
+
+###### Text Field
+
+```typescript
+{
+    // ...
+    customFields: {
+        // ... other fields
+        textField:"some text"
+    },
+    customFieldDescriptions: {
+        // ... other fields
+        textField: {
+            id:"textField",
+            description: "A Text Field"
+            type: "text",
+        },
+    }
+}
+```
+
+###### Image Field
+
+
+```typescript
+{
+    // ...
+    customFields: {
+        // ... other fields
+        imageField:{ // image struct
+            large: {
+                src: string;
+            },
+            mobile: {
+                src: string;
+            }
+            thumbnail: {
+                src: string;
+            }
+            raw: {
+                src: string;
+            }
+            ratio: number;
+            focus: {
+                x: number;
+                y: number;
+            }
+        }
+    },
+    customFieldDescriptions: {
+        // ... other fields
+        imageField: {
+            id:"imageField",
+            description: "An uploaded image"
+            type: "image",
+        },
+    }
+}
+```
+
+###### Checkbox field
+
+```typescript
+{
+    // ...
+    customFields: {
+        // ... other fields
+        checkboxField: false,
+    },
+    customFieldDescriptions: {
+        // ... other fields
+        checkboxField: {
+            id:"checkboxField",
+            description: "A boolean field"
+            type: "checkbox",
+        },
+    }
+}
+```
+
+###### Complex Field
+
+This is a store of custom lists of multiple structured 
+items need to be added to a page
+
+```typescript
+{
+    customFields: {
+        aComplexArray: [
+            {
+                title: 'item-1',
+                description: '<div>some formatted <span>html</span></div>',
+            },
+            {
+                title: 'item-2',
+                description: '<div>some other formatted <span>html</span></div>',
+            },
+        ]
+    },
+    customFieldDescriptiosn: {
+        aComplexArray: {
+            id: 'aComplexArray',
+            description: 'Your Items',
+            fields: [
+                {
+                    id: 'title',
+                    type: 'text',
+                    description: 'title',
+                },
+                {
+                    id: 'description',
+                    type: 'formattedText',
+                    description: 'Description',
+                }
+            ],
+            primaryField: 'title',
+        }
+    }
+}
+```

@@ -1,4 +1,4 @@
-#ImageRotator
+# ImageRotator
 
 Rotates the class `current` over a series of child divs
 at a given interval.
@@ -9,7 +9,7 @@ If an element contains an image with the `data-content-type="html5"` tag
 it will ignore the interval and wait for the 'videoEnded' event on the image
 
 
-#Usage
+# Usage
 Requires to have images nested inside divs and
 to work with video, data-content-type must be set:
 

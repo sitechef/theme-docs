@@ -56,6 +56,11 @@
                 </li>
             
                 <li class="toctree-l1 ">
+                    <a class="" href="../../updatingData/">Updating Data</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
                     <a class="" href="../../structure/">Theme Structure</a>
                     
                 </li>
@@ -263,7 +268,7 @@ are not compromised</p>
 <li>JQuery 1.9+</li>
 <li><a href="http://lodash.com/">Lodash</a>/<a href="http://underscorejs.org">Underscore</a></li>
 <li>Nunjucks Slim (<a href="http://mozilla.github.io/nunjucks/files/nunjucks-slim.js">dev</a>/<a href="http://mozilla.github.io/nunjucks/files/nunjucks-slim.min.js">prod</a>)</li>
-<li>All Nunjucks templates used in redering strips <strong><em>must be pre-rendered</em></strong> and included in the html. (See <a href="../../assetpipeline/#frontend-templates">Frontend Templating</a> for explanation)</li>
+<li>All Nunjucks templates used in redering strips <strong><em>must be pre-rendered</em></strong> and included in the html. (See <a href="../../assetpipeline/# frontend-templates">Frontend Templating</a> for explanation)</li>
 </ul>
 <h2 id="usage">Usage</h2>
 <p>Create a holder div on the landing page template:</p>
@@ -271,7 +276,7 @@ are not compromised</p>
 <pre><code>&lt;div id="new-strips"&gt;&lt;/div&gt;
 </code></pre>
 <p>Require and instantiate the Strip Loader library
-with the array of menu "children" (see <a href="../../datastructure/#menu-struct">Menu Struct</a>)</p>
+with the array of menu "children" (see <a href="../../datastructure/# menu-struct">Menu Struct</a>)</p>
 <p>Ensure that 'nunjucks-slim.min.js' is included both in the html
 and in the <code>dist/js</code> folder</p>
 <p>Javascript:</p>
@@ -310,7 +315,7 @@ var myLoader = new StripLoader(
      * The css selector for the container
      * of the strips
      */
-    appendLocation: '#my-strip-container',
+    appendLocation: '# my-strip-container',
     /**
      * The endpoint for the ajax request
      * for the category (must end with trailing /)

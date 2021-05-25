@@ -1,4 +1,4 @@
-#Strip Loader
+# Strip Loader
 
 *For use in websites where the content for each
 of the subpages of the landing page is loaded
@@ -12,17 +12,17 @@ Strips are loaded dynamically so that the SEO benefits
 of having separate URLs for each subsection of the website
 are not compromised
 
-##Requirements
+## Requirements
 
 For the StripLoader to work it requires the following libraries:
 
 - JQuery 1.9+
 - [Lodash](http://lodash.com/)/[Underscore](http://underscorejs.org)
 - Nunjucks Slim ([dev](http://mozilla.github.io/nunjucks/files/nunjucks-slim.js)/[prod](http://mozilla.github.io/nunjucks/files/nunjucks-slim.min.js))
-- All Nunjucks templates used in redering strips ***must be pre-rendered*** and included in the html. (See [Frontend Templating](../assetpipeline.md#frontend-templates) for explanation)
+- All Nunjucks templates used in redering strips ***must be pre-rendered*** and included in the html. (See [Frontend Templating](../assetpipeline.md# frontend-templates) for explanation)
 
 
-##Usage
+## Usage
 
 Create a holder div on the landing page template:
 
@@ -32,7 +32,7 @@ HTML:
 
 
 Require and instantiate the Strip Loader library
-with the array of menu "children" (see [Menu Struct](../datastructure.md#menu-struct))
+with the array of menu "children" (see [Menu Struct](../datastructure.md# menu-struct))
 
 Ensure that 'nunjucks-slim.min.js' is included both in the html
 and in the `dist/js` folder
@@ -51,7 +51,7 @@ Javascript:
 
 Result:
 
-####1. While Loading
+#### 1. While Loading
 
 The "new-strips" div will be populated with
 
@@ -59,12 +59,12 @@ The "new-strips" div will be populated with
 
 for each page to be loaded
 
-####2. When Loaded
+#### 2. When Loaded
 
 The full templated page will replace the above "holder"
 
 
-##Options
+## Options
 
 The striploader can be started with the following options:
 
@@ -83,7 +83,7 @@ The striploader can be started with the following options:
          * The css selector for the container
          * of the strips
          */
-        appendLocation: '#my-strip-container',
+        appendLocation: '# my-strip-container',
         /**
          * The endpoint for the ajax request
          * for the category (must end with trailing /)

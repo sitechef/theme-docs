@@ -1,4 +1,4 @@
-#History Scroll
+# History Scroll
 
 
 For use with the [Strip Loader](striploader.md)

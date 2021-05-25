@@ -1,4 +1,4 @@
-#Swipes
+# Swipes
 
 Provides Swiping/Panning and translate interactions
 on top of [Hammer.js](http://hammerjs.github.io/)
@@ -10,7 +10,7 @@ follow your touch*
 
 ***Hammer.js IS NOT IE8 compatible so only include it within an an [IE Conditional tag](http://www.quirksmode.org/css/condcom.html)***
 
-##Usage
+## Usage
 
 HTML:
 
@@ -34,7 +34,7 @@ JS:
         }
     });
 
-##Options
+## Options
 
 
 Use the following options to tailor the swipe

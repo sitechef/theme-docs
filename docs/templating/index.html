@@ -56,6 +56,11 @@
                 </li>
             
                 <li class="toctree-l1 ">
+                    <a class="" href="../updatingData/">Updating Data</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
                     <a class="" href="../structure/">Theme Structure</a>
                     
                 </li>
@@ -283,7 +288,7 @@
           <div role="main">
             <div class="section html-templating">
               <p>SiteChef uses <a href="http://mozilla.github.io/nunjucks/">Nunjucks</a> with some minor
-<a href="#templating-differences">modifications</a>.</p>
+<a href="# templating-differences">modifications</a>.</p>
 <p>Nunjucks is a javascript templating language heavily inspired by Python's
 <a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a></p>
 <h1 id="basics">Basics</h1>
@@ -291,7 +296,7 @@
 An effort has been made to keep the subsections as modular as possible.
 This is a very basic overview of the templating language.
 A more thorough description can be found <a href="http://mozilla.github.io/nunjucks/templating.html">here</a>,
-but <em>please be aware of the following <a href="#templating-differences">exceptions</a></em></p>
+but <em>please be aware of the following <a href="# templating-differences">exceptions</a></em></p>
 <p>Variables and any content you wish to output into the text are encircled by
 double curly braces <code>{{ variable }}</code></p>
 <p>Logic and any expressions are enclosed by a single curly brace and the
@@ -385,8 +390,8 @@ to generate the html for any full resolution images (ie not thumbnails)</p>
 into a single scrolling frontpage, we have provided the following function <code>get_page()</code>
 that is only available on the backend.</p>
 <p>The function takes the parameter <code>id</code> - an <code>Integer</code> that corresponds to the id
-in either a <a href="../datastructure/#content-struct">Content Struct</a> or <a href="../datastructure/#menu-struct">Menu Struct</a>.
-<code>get_page()</code> returns a <a href="../datastructure/#content-struct">Content Struct</a>.</p>
+in either a <a href="../datastructure/# content-struct">Content Struct</a> or <a href="../datastructure/# menu-struct">Menu Struct</a>.
+<code>get_page()</code> returns a <a href="../datastructure/# content-struct">Content Struct</a>.</p>
 <p>So to load all the children of the frontpage in a template this would work:</p>
 <pre><code>  &lt;div class="frontpage-children"&gt;
     {% for child in menu %}
@@ -408,45 +413,45 @@ in either a <a href="../datastructure/#content-struct">Content Struct</a> or <a 
 <pre><code>&lt;div class="customer-name"&gt;ANDREW SMITH&lt;/div&gt;
 </code></pre>
 <p>N.B. the filters available with SiteChef is <strong>not</strong> entirely the same
-as those specified in <a href="http://mozilla.github.io/nunjucks/templating.html#filters">the Nunjucks Documentation</a>
-See <a href="#filter-reference">below</a> for an absolute list of what you can use</p>
+as those specified in <a href="http://mozilla.github.io/nunjucks/templating.html# filters">the Nunjucks Documentation</a>
+See <a href="# filter-reference">below</a> for an absolute list of what you can use</p>
 <h2 id="filter-reference">Filter Reference</h2>
 <p>These are the available filters:</p>
 <h5 id="abs">abs</h5>
 <p><em>function(number)</em> Return the absolute value of the argument</p>
 <h5 id="batch">batch</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#batch">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# batch">here</a></p>
 <h5 id="capitalize">capitalize</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#capitalize">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# capitalize">here</a></p>
 <h5 id="default">default</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#default">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# default">here</a></p>
 <h5 id="escape-aliased-as-e">escape (aliased as e)</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#escape">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# escape">here</a></p>
 <h5 id="first">first</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#first">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# first">here</a></p>
 <h5 id="format_date">format_date</h5>
 <p><em>function(&lt;string&gt; inputDate, &lt;string&gt; outputFormat, &lt;string&gt; inputFormat (optional))</em></p>
 <p>&nbsp;&nbsp;Returns a formatted date string.</p>
 <p>&nbsp;&nbsp;<strong>N.B.</strong> requires <a href="http://momentjs.com">Moment.js</a></p>
 <p>&nbsp;&nbsp;For date formatting reference see <a href="http://momentjs.com/docs/#/displaying/">the Moment.js documentation</a></p>
 <h5 id="join">join</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#join">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# join">here</a></p>
 <h5 id="json_encode">json_encode</h5>
 <p><em>function(mixed)</em> Return the input JSON encoded</p>
 <h5 id="last">last</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#last">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# last">here</a></p>
 <h5 id="length">length</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#length">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# length">here</a></p>
 <h5 id="lower">lower</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#lower">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# lower">here</a></p>
 <h5 id="nl2br">nl2br</h5>
 <p><em>function(string)</em> Return the input with linebreaks replaced as <code>&lt;br/&gt;</code></p>
 <h5 id="replace">replace</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#replace">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# replace">here</a></p>
 <h5 id="reverse">reverse</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#reverse">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# reverse">here</a></p>
 <h5 id="round">round</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#round">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# round">here</a></p>
 <h5 id="rnd">rnd</h5>
 <p><em>function(number)</em> Return a random integer between 0 and <em>number</em></p>
 <h5 id="safe">safe</h5>
@@ -458,21 +463,21 @@ See <a href="#filter-reference">below</a> for an absolute list of what you can u
 </code></pre>
 <p>outputs a raw json-encoded object for use in frontend javascript</p>
 <h5 id="slice">slice</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#slice">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# slice">here</a></p>
 <h5 id="sort">sort</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#sort">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# sort">here</a></p>
 <h5 id="title">title</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#title">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# title">here</a></p>
 <h5 id="trim">trim</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#trim">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# trim">here</a></p>
 <h5 id="upper">upper</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#upper">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# upper">here</a></p>
 <h5 id="urlencode">urlencode</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#urlencode">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# urlencode">here</a></p>
 <h5 id="wordcount">wordcount</h5>
-<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/#wordcount">here</a></p>
+<p>see <a href="http://jinja.pocoo.org/docs/dev/templates/# wordcount">here</a></p>
 <p>The following Nujucks filters <strong>cannot</strong> be used with SiteChef. <em>You will find that
-they may work when using <code>sitechef serve</code> but <strong>will not work in production</strong>.</em></p>
+they may work when using <code>sitechef serve</code> but </em><em>will not work in production</em><em>.</em></p>
 <ul>
 <li>center</li>
 <li>dictsort</li>
@@ -492,7 +497,7 @@ javascript code.</p>
 need to do three things:</p>
 <h2 id="frontend-template-guide">Frontend Template Guide</h2>
 <h4 id="1-compile-selected-templates-to-javascript">1. Compile Selected Templates to Javascript</h4>
-<p>This can be done automatically using the Gulp task <code>templates</code>. You will need to edit the configuration file <code>gulp-templates</code> and add all templates referenced and any templates included or imported. See <a href="../assetpipeline/#frontend-templates">here</a> for detailed instructions and an example.</p>
+<p>This can be done automatically using the Gulp task <code>templates</code>. You will need to edit the configuration file <code>gulp-templates</code> and add all templates referenced and any templates included or imported. See <a href="../assetpipeline/# frontend-templates">here</a> for detailed instructions and an example.</p>
 <h4 id="2-include-the-nunjucks-slim-library-in-your-html">2. Include the <code>Nunjucks Slim</code> library in your html</h4>
 <p>Add the following tag to your html before the main <code>app.js</code> script:</p>
 <pre><code>&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/nunjucks/1.0.0/nunjucks-slim.min.js"&gt;&lt;/script&gt;
@@ -534,21 +539,21 @@ Currently there are two available widgets:</p>
 <li>Contact Widget - requires the template <code>contactPage.html</code></li>
 <li>Food Menu Widget - requires the template <code>foodMenu.html</code></li>
 </ol>
-<p>More detail is available in the description of the <a href="../datastructure/#widgets">widget data structure</a></p>
+<p>More detail is available in the description of the <a href="../datastructure/# widgets">widget data structure</a></p>
 <h1 id="templating-differences">Templating Differences</h1>
 <p>The main difference between SiteChef's templating system and Nunjucks are the filters.
-Please stick to the <a href="#filter-reference">absolute list above</a> to ensure that your
+Please stick to the <a href="# filter-reference">absolute list above</a> to ensure that your
 theme works in production.</p>
 <h2 id="unavailable-nunjucks-functionality">Unavailable Nunjucks Functionality</h2>
 <p>The following Nunjucks features will <strong>not work in production</strong> on the backend:</p>
-<h3 id="asnyceach"><a href="http://mozilla.github.io/nunjucks/templating.html#asynceach">asnycEach</a></h3>
-<h3 id="asyncall"><a href="http://mozilla.github.io/nunjucks/templating.html#asyncall">asyncAll</a></h3>
-<h3 id="raw-please-use-safe-for-cross-compatibility"><a href="http://mozilla.github.io/nunjucks/templating.html#raw">raw</a> - <em>Please use <code>safe</code> for cross-compatibility</em></h3>
-<h3 id="call"><a href="http://mozilla.github.io/nunjucks/templating.html#call">call</a></h3>
-<h3 id="use-of-regular-expressions"><a href="http://mozilla.github.io/nunjucks/templating.html#regular-expressions">use of regular expressions</a></h3>
+<h3 id="asnyceach"><a href="http://mozilla.github.io/nunjucks/templating.html# asynceach">asnycEach</a></h3>
+<h3 id="asyncall"><a href="http://mozilla.github.io/nunjucks/templating.html# asyncall">asyncAll</a></h3>
+<h3 id="raw-please-use-safe-for-cross-compatibility"><a href="http://mozilla.github.io/nunjucks/templating.html# raw">raw</a> - <em>Please use <code>safe</code> for cross-compatibility</em></h3>
+<h3 id="call"><a href="http://mozilla.github.io/nunjucks/templating.html# call">call</a></h3>
+<h3 id="use-of-regular-expressions"><a href="http://mozilla.github.io/nunjucks/templating.html# regular-expressions">use of regular expressions</a></h3>
 <p>Raw regular expressions cannot be used inline or in filters</p>
-<h3 id="cycler-function"><a href="http://mozilla.github.io/nunjucks/templating.html#cycleritem1-item2-itemn">cycler function</a></h3>
-<h3 id="joiner-function"><a href="http://mozilla.github.io/nunjucks/templating.html#joiner-separator">joiner function</a></h3>
+<h3 id="cycler-function"><a href="http://mozilla.github.io/nunjucks/templating.html# cycleritem1-item2-itemn">cycler function</a></h3>
+<h3 id="joiner-function"><a href="http://mozilla.github.io/nunjucks/templating.html# joiner-separator">joiner function</a></h3>
 <h1 id="special-pages">Special Pages</h1>
 <h2 id="comingsoonhtml">comingSoon.html</h2>
 <p>Coming soon is an option in the <code>Basic Settings</code> page

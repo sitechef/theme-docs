@@ -56,6 +56,11 @@
                 </li>
             
                 <li class="toctree-l1 ">
+                    <a class="" href="../updatingData/">Updating Data</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
                     <a class="" href="../structure/">Theme Structure</a>
                     
                 </li>
@@ -119,6 +124,10 @@
                                 <li><a class="toctree-l3" href="#voucher-struct">Voucher Struct</a></li>
                             
                                 <li><a class="toctree-l3" href="#email-settings-struct">Email Settings Struct</a></li>
+                            
+                                <li><a class="toctree-l3" href="#custom-field-description-struct">Custom Field Description Struct</a></li>
+                            
+                                <li><a class="toctree-l3" href="#custom-field-struct">Custom Field Struct</a></li>
                             
                         
                         </ul>
@@ -297,27 +306,27 @@
 &nbsp;                          <em><code>root</code> - this is the landing page</em>
 &nbsp;                          <em><code>subcategory</code> - any child of the frontpage</em>
 &nbsp;                          <em><code>media</code> - a static page describing a user-uploaded image/video</em>
-&nbsp;                          <em><code>post</code> - a static blog post </em>
-&nbsp;                          <em><code>offer</code> - permalink page for a special offer</em>
-&nbsp; <a href="#preferences-struct">preferences</a> <code>struct</code>     <em>list of user-set variables</em>
-&nbsp; <a href="#socialmedia-array">socialMedia</a> <code>array</code>     <em>User social media links</em>
-&nbsp; specialOffers <code>array</code>    <em>Special Offers:</em>
+&nbsp;                          <em><code>post</code> - a static blog post *
+&nbsp;                          </em><code>offer</code> - permalink page for a special offer<em>
+&nbsp; <a href="# preferences-struct">preferences</a> <code>struct</code>     </em>list of user-set variables<em>
+&nbsp; <a href="# socialmedia-array">socialMedia</a> <code>array</code>     </em>User social media links<em>
+&nbsp; specialOffers <code>array</code>    </em>Special Offers:<em>
 &nbsp; [
-&nbsp;     <a href="#special-offer-struct">specialOffer</a> <code>struct</code>         <em>Array of any valid special offers</em>
+&nbsp;     <a href="# special-offer-struct">specialOffer</a> <code>struct</code>         </em>Array of any valid special offers<em>
 &nbsp; ]
-&nbsp; <a href="#meta-struct">meta</a> <code>struct</code>            <em>user-specific configuration automatically generated</em>
-&nbsp; <a href="#menu-array">menu</a> <code>array</code>              <em>the main site navigation hiearchy with nested children</em>
-&nbsp; <a href="#menu-array">menuChildren</a> <code>array</code>      <em>If the current page has children, they are listed here - useful for submenus</em>
-&nbsp; <a href="#content-struct">content</a> <code>struct</code>          <em>data about the current page</em>
-&nbsp; <a href="#voucher-struct">voucher</a> <code>struct</code>          <em>data about the current voucher (only available through <code>voucher.html</code> and <code>voucherEmail.html</code> template entrypoints)</em>
-&nbsp; <a href="#email-settings-struct">emailSettings</a> <code>struct</code>    <em>data about the current voucher (only available through <code>voucherEmail.html</code> template entrypoints)</em></p>
+&nbsp; <a href="# meta-struct">meta</a> <code>struct</code>            </em>user-specific configuration automatically generated<em>
+&nbsp; <a href="# menu-array">menu</a> <code>array</code>              </em>the main site navigation hiearchy with nested children<em>
+&nbsp; <a href="# menu-array">menuChildren</a> <code>array</code>      </em>If the current page has children, they are listed here - useful for submenus<em>
+&nbsp; <a href="# content-struct">content</a> <code>struct</code>          </em>data about the current page<em>
+&nbsp; <a href="# voucher-struct">voucher</a> <code>struct</code>          </em>data about the current voucher (only available through <code>voucher.html</code> and <code>voucherEmail.html</code> template entrypoints)<em>
+&nbsp; <a href="# email-settings-struct">emailSettings</a> <code>struct</code>    </em>data about the current voucher (only available through <code>voucherEmail.html</code> template entrypoints)*</p>
 <p><strong>}</strong></p>
 <h2 id="preferences-struct">Preferences Struct</h2>
 <h4 id="preferences-are-user-generated-options">Preferences are user-generated options</h4>
 <p><strong>{</strong>
 &nbsp; currentTemplate <code>string</code>       <em>active template name</em>
-&nbsp; siteLogo <code>string</code>              <em>relative url of logo to <a href="#image-root">image root</a></em>
-&nbsp; siteLogo_2x <code>string</code>           <em>relative url of logo for retina to <a href="#image-root">image root</a></em>
+&nbsp; siteLogo <code>string</code>              <em>relative url of logo to <a href="# image-root">image root</a></em>
+&nbsp; siteLogo_2x <code>string</code>           <em>relative url of logo for retina to <a href="# image-root">image root</a></em>
 &nbsp; comingSoon <code>bool</code>              <em>whether or not the site is coming soon</em>
 &nbsp; restaurantName <code>string</code>
 &nbsp; restaurantDescription <code>string</code>
@@ -353,24 +362,24 @@
 <p><strong>{</strong>
 &nbsp; favIcon <code>string</code>               <em>absolute path of the favicon</em>
 &nbsp; logo <code>string</code>                  <em>rendered html of the logo</em>
-&nbsp; isMobile <code>string</code>              <em>is this being viewed on a mobile device - <strong>only works in production</strong> </em>
-&nbsp; imageRoot <code>string</code>             <em>Absolute root of the CDN for user content</em>
-&nbsp; siteRoot <code>string</code>              <em>absolute path of site root</em>
-&nbsp; customJS <code>string</code>              <em>frontend javascript variables</em>
-&nbsp; templatePreferences <code>struct</code>   <em>User options selected by the current user</em>
-&nbsp;    <strong>{</strong>
-&nbsp;      colours <code>struct</code>         <em>user colour options by id</em>
-&nbsp;      fonts <code>struct</code>           <em>user font options by id</em>
-&nbsp;      variables <code>struct</code>       <em>user colour options by id</em>
-&nbsp;    <strong>}</strong>
-<strong>}</strong></p>
+&nbsp; isMobile <code>string</code>              <em>is this being viewed on a mobile device - </em><em>only works in production</em><em> *
+&nbsp; imageRoot <code>string</code>             </em>Absolute root of the CDN for user content<em>
+&nbsp; siteRoot <code>string</code>              </em>absolute path of site root<em>
+&nbsp; customJS <code>string</code>              </em>frontend javascript variables<em>
+&nbsp; templatePreferences <code>struct</code>   </em>User options selected by the current user<em>
+&nbsp;    </em><em>{</em><em>
+&nbsp;      colours <code>struct</code>         </em>user colour options by id<em>
+&nbsp;      fonts <code>struct</code>           </em>user font options by id<em>
+&nbsp;      variables <code>struct</code>       </em>user colour options by id<em>
+&nbsp;    </em><em>}</em><em>
+</em><em>}</em>*</p>
 <h2 id="menu-array">Menu Array</h2>
 <h4 id="nested-site-hierarchy-for-rendering-the-navigation">Nested site hierarchy for rendering the navigation</h4>
 <p><strong>[</strong>
-&nbsp;  <a href="#menu-struct">Menu</a> <code>struct</code>
+&nbsp;  <a href="# menu-struct">Menu</a> <code>struct</code>
 <strong>]</strong></p>
 <h2 id="menu-struct">Menu Struct</h2>
-<h4 id="a-cut-down-version-of-the-content-struct">A Cut-down version of the <a href="#content-struct">Content Struct</a></h4>
+<h4 id="a-cut-down-version-of-the-content-struct">A Cut-down version of the <a href="# content-struct">Content Struct</a></h4>
 <p><strong>{</strong>
 &nbsp;  id <code>int</code>             <em>id of page</em>
 &nbsp;  importance <code>int</code>     <em>higher number pages appear first order</em>
@@ -388,7 +397,7 @@
 &nbsp;    <strong>}</strong>
 &nbsp;  children <code>array</code>
 &nbsp;  <strong>[</strong>
-&nbsp;    <a href="#menu-struct">Menu</a> <code>struct</code>
+&nbsp;    <a href="# menu-struct">Menu</a> <code>struct</code>
 &nbsp;  <strong>]</strong>
 <strong>}</strong></p>
 <h2 id="content-struct">Content Struct</h2>
@@ -399,21 +408,21 @@
 &nbsp;  id <code>int</code>                    <em>the unique id of this page</em>
 &nbsp;  name <code>string</code>               <em>Page title - what appears in the navigation</em>
 &nbsp;  description <code>string</code>        <em>the page summary</em>
-&nbsp;  body <code>string</code>               <em>the body with widgets rendered - use in preference to <strong>rawBody</strong> </em>
-&nbsp;  rawBody <code>string</code>            <em>body before widgets have been rendered</em>
+&nbsp;  body <code>string</code>               <em>the body with widgets rendered - use in preference to </em><em>rawBody</em><em> *
+&nbsp;  rawBody <code>string</code>            </em>body before widgets have been rendered<em>
 &nbsp;  parent <code>struct</code>
-&nbsp;  <strong>{</strong>
-&nbsp;      id <code>int</code>                <em>Id of the parent page</em>
-&nbsp;  <strong>}</strong>
+&nbsp;  </em><em>{</em><em>
+&nbsp;      id <code>int</code>                </em>Id of the parent page<em>
+&nbsp;  </em><em>}</em><em>
 &nbsp;  items <code>array</code>
-&nbsp;  <strong>[</strong>
-&nbsp;      <a href="#item-struct">Item</a> <code>struct</code>
-&nbsp;  <strong>]</strong>
-&nbsp;  uri <code>string</code>                <em>the absolute path form site root eg <code>/gallery</code></em>
-&nbsp;  url <code>string</code>                <em>slug for this page eg. 'gallery'</em>
-&nbsp;  level <code>int</code>                 <em>what level in site hierarchy:</em>
-&nbsp;                                  <em><code>0</code> - Front page</em>
-&nbsp;                                  <em><code>1</code> - Child of Front page </em>
+&nbsp;  </em><em>[</em><em>
+&nbsp;      <a href="# item-struct">Item</a> <code>struct</code>
+&nbsp;  </em><em>]</em><em>
+&nbsp;  uri <code>string</code>                </em>the absolute path form site root eg <code>/gallery</code><em>
+&nbsp;  url <code>string</code>                </em>slug for this page eg. 'gallery'<em>
+&nbsp;  level <code>int</code>                 </em>what level in site hierarchy:<em>
+&nbsp;                                  </em><code>0</code> - Front page<em>
+&nbsp;                                  </em><code>1</code> - Child of Front page *
 &nbsp;                                  <em><code>2</code> - Child of child of front page</em>
 &nbsp;  type <code>string</code>               <em>the current page format - use the <code>format</code> integer in preference</em>
 &nbsp;                                  <em>as this is internationalized</em>
@@ -422,47 +431,47 @@
 &nbsp;                                  <em><code>1</code> - Blog</em>
 &nbsp;                                  <em><code>2</code> - Food Menu</em>
 &nbsp;                                  <em><code>3</code> - Stream - ie raw data from instragram</em>
-&nbsp;                                  <em><code>4</code> - Static Page </em>
-&nbsp;                                  <em><code>5</code> - External Link</em>
-&nbsp;                                  <em><code>6</code> - Contact Page</em>
-&nbsp;  showOnMobile <code>bool</code>         <em>display this page when viewed on mobile</em>
-&nbsp;  showInFooter <code>bool</code>         <em>display a link to this page in the page footer</em>
-&nbsp;  linkImage <code>string</code>          <em>absolute path of the image to use when external sites show a preview of this page</em>
-&nbsp;  <a href="#item-struct">featuredImage</a> <code>struct</code>      <em>featured image for this section (Image)</em>
-&nbsp;  htmlTitle <code>string</code>          <em>text for the brower tab title</em>
-&nbsp;  metaDescription <code>string</code>    <em>text for the meta description for the page</em>
-&nbsp;  lastUpdated <code>string</code>        <em>date formatted YYYY-MM-DD hh:ii:ss</em>
-&nbsp;  customSettings <code>struct</code>     <em>[OPTIONAL] this is contingent on page type</em>
-&nbsp;  <strong>{</strong>
-&nbsp;      galleryType <code>string</code>    <em>Type of gallery: <code>carousel</code> or <code>mosaic</code></em>
-&nbsp;      location <code>object</code>       <em>Location override</em>
-&nbsp;  <strong>}</strong>
-&nbsp;  blogPosts <code>array</code>           <em>Only present when <code>format</code> is <code>1</code></em>
-&nbsp;  <strong>[</strong>
-&nbsp;      <a href="#blog-post-struct">Blog Post</a> <code>struct</code>
-&nbsp;  <strong>]</strong>
-&nbsp;  blogPageTotal <code>int</code>         <em>Only present when <code>format</code> is <code>1</code> total number of blog pages</em>
-&nbsp;  prevBlogPage <code>string</code>|<code>false</code> <em>Only present when <code>format</code> is <code>1</code> url to previous blog page</em>
-&nbsp;  nextBlogPage <code>string</code>|<code>false</code> <em>Only present when <code>format</code> is <code>1</code> url to next blog page</em>
-&nbsp;  foodMenu <code>struct</code>           <em>Only present when <code>format</code> is <code>2</code></em>
-&nbsp;  <strong>{</strong>
+&nbsp;                                  <em><code>4</code> - Static Page *
+&nbsp;                                  </em><code>5</code> - External Link<em>
+&nbsp;                                  </em><code>6</code> - Contact Page<em>
+&nbsp;  showOnMobile <code>bool</code>         </em>display this page when viewed on mobile<em>
+&nbsp;  showInFooter <code>bool</code>         </em>display a link to this page in the page footer<em>
+&nbsp;  linkImage <code>string</code>          </em>absolute path of the image to use when external sites show a preview of this page<em>
+&nbsp;  <a href="# item-struct">featuredImage</a> <code>struct</code>      </em>featured image for this section (Image)<em>
+&nbsp;  htmlTitle <code>string</code>          </em>text for the brower tab title<em>
+&nbsp;  metaDescription <code>string</code>    </em>text for the meta description for the page<em>
+&nbsp;  lastUpdated <code>string</code>        </em>date formatted YYYY-MM-DD hh:ii:ss<em>
+&nbsp;  customSettings <code>struct</code>     </em>[OPTIONAL] this is contingent on page type<em>
+&nbsp;  </em><em>{</em><em>
+&nbsp;      galleryType <code>string</code>    </em>Type of gallery: <code>carousel</code> or <code>mosaic</code><em>
+&nbsp;      location <code>object</code>       </em>Location override<em>
+&nbsp;  </em><em>}</em><em>
+&nbsp;  blogPosts <code>array</code>           </em>Only present when <code>format</code> is <code>1</code><em>
+&nbsp;  </em><em>[</em><em>
+&nbsp;      <a href="# blog-post-struct">Blog Post</a> <code>struct</code>
+&nbsp;  </em><em>]</em><em>
+&nbsp;  blogPageTotal <code>int</code>         </em>Only present when <code>format</code> is <code>1</code> total number of blog pages<em>
+&nbsp;  prevBlogPage <code>string</code>|<code>false</code> </em>Only present when <code>format</code> is <code>1</code> url to previous blog page<em>
+&nbsp;  nextBlogPage <code>string</code>|<code>false</code> </em>Only present when <code>format</code> is <code>1</code> url to next blog page<em>
+&nbsp;  foodMenu <code>struct</code>           </em>Only present when <code>format</code> is <code>2</code><em>
+&nbsp;  </em><em>{</em><em>
 &nbsp;      id <code>integer</code>
 &nbsp;      menus <code>array</code>
-&nbsp;      <strong>[</strong>
-&nbsp;        <a href="#meal-struct">meal</a>                <em>A meal e.g. Breakfast</em>
-&nbsp;      <strong>]</strong>
-&nbsp;  <strong>}</strong>
-&nbsp;  customFields <code>struct</code>    <em>key-value hash of custom data for this page</em>
-&nbsp;  <strong>{</strong>
-&nbsp;      fieldKey <code>string</code>: <fieldValue - mixed>  <em>data as described in customFieldDescriptions</em>
+&nbsp;      </em><em>[</em><em>
+&nbsp;        <a href="# meal-struct">meal</a>                </em>A meal e.g. Breakfast<em>
+&nbsp;      </em><em>]</em><em>
+&nbsp;  </em><em>}</em><em>
+&nbsp;  customFields <code>struct</code>    </em>key-value hash of custom data for this page<em>
+&nbsp;  </em><em>{</em><em>
+&nbsp;      fieldKey <code>string</code>: <fieldValue - mixed>  </em>data as described in customFieldDescriptions -- see <a href="#custom-field-struct">Custom Field Struct</a><em>
 &nbsp;      ...
-&nbsp;  <strong>}</strong>
-&nbsp;  customFieldDescriptions <code>struct</code>    <em>key-value hash describing custom field types</em>
-&nbsp;  <strong>{</strong>
-&nbsp;      fieldKey <code>string</code>: <fieldValue - mixed>  <em>data as described in customFieldDescriptions</em>
+&nbsp;  </em><em>}</em><em>
+&nbsp;  customFieldDescriptions <code>struct</code>    </em>key-value hash describing custom field types<em>
+&nbsp;  </em><em>{</em><em>
+&nbsp;      fieldKey <code>string</code>: <fieldValue - mixed>  </em>data as described in customFieldDescriptions<em>
 &nbsp;      ...
-&nbsp;  <strong>}</strong>
-<strong>}</strong></p>
+&nbsp;  </em><em>}</em><em>
+</em><em>}</em>*</p>
 <h2 id="item-struct">Item Struct</h2>
 <h4 id="data-for-an-image-or-video">Data for an image or video</h4>
 <p><strong>{</strong>
@@ -476,9 +485,9 @@
 &nbsp;                              <em><code>vimeo</code>  - a vimeo video to embed</em>
 &nbsp;  tags <code>string</code>               <em>User-tagged data</em>
 &nbsp;  slug <code>string</code>               <em>url to static version of this item</em>
-&nbsp;  <a href="#image-struct">image</a> <code>struct</code>     <em>Image Data</em>
-&nbsp;  <a href="#video-struct">video</a> <code>struct</code>     <em>Youtube/Vimeo Metadata</em>
-&nbsp;  <a href="#video-data-struct">videoData</a> <code>struct</code>     <em>[OPTIONAL] HTML5 Video Data</em>
+&nbsp;  <a href="# image-struct">image</a> <code>struct</code>     <em>Image Data</em>
+&nbsp;  <a href="# video-struct">video</a> <code>struct</code>     <em>Youtube/Vimeo Metadata</em>
+&nbsp;  <a href="# video-data-struct">videoData</a> <code>struct</code>     <em>[OPTIONAL] HTML5 Video Data</em>
 <strong>}</strong></p>
 <h2 id="image-struct">Image Struct</h2>
 <h4 id="data-for-accessing-different-versions-of-images">Data for accessing different versions of images</h4>
@@ -521,10 +530,10 @@
 &nbsp;  baseName <code>string</code>       <em>unique filename base</em>
 &nbsp;  versions <code>struct</code>       <em>available video versions</em>
 &nbsp;  <strong>{</strong>
-&nbsp;      <a href="#html5-struct">mp4High</a> <code>struct</code>   <em>Best quality mp4</em>
-&nbsp;      <a href="#html5-struct">mobile</a> <code>struct</code>    <em>low quality mp4</em>
-&nbsp;      <a href="#html5-struct">webM</a> <code>struct</code>      <em>high quality webm</em>
-&nbsp;      <a href="#html5-struct">thumbnails</a> <code>struct</code>  <em>auto-generated thumbnails</em>
+&nbsp;      <a href="# html5-struct">mp4High</a> <code>struct</code>   <em>Best quality mp4</em>
+&nbsp;      <a href="# html5-struct">mobile</a> <code>struct</code>    <em>low quality mp4</em>
+&nbsp;      <a href="# html5-struct">webM</a> <code>struct</code>      <em>high quality webm</em>
+&nbsp;      <a href="# html5-struct">thumbnails</a> <code>struct</code>  <em>auto-generated thumbnails</em>
 &nbsp;  <strong>}</strong>
 <strong>}</strong></p>
 <h2 id="html5-struct">HTML5 Struct</h2>
@@ -556,7 +565,7 @@
 <p><strong>{</strong>
 &nbsp;  id <code>int</code>                    <em>blog post id</em>
 &nbsp;  slug <code>string</code>               <em>the url fragment for this offer</em>
-&nbsp;  <a href="#item-struct">featuredImage</a> <code>struct</code>      <em>featured image for this section (Image)</em>
+&nbsp;  <a href="# item-struct">featuredImage</a> <code>struct</code>      <em>featured image for this section (Image)</em>
 &nbsp;  title <code>string</code>              <em>Offer title</em>
 &nbsp;  description <code>string</code>        <em>Offer description</em>
 &nbsp;  tAndCs <code>string</code>             <em>HTML-formatted text for Terms And Conditions relating to offer</em>
@@ -573,10 +582,10 @@
 &nbsp;  body <code>string</code>               <em>raw body before widgets have been rendered</em>
 &nbsp;                              <strong><em>N.B. use <code>renderedBody</code> instead for templating</em></strong>
 &nbsp;  category_id <code>int</code>           <em>the id of the parent page</em>
-&nbsp;  <a href="#item-struct">featuredImage</a> <code>struct</code>      <em>featured image for this section (Image)</em>
+&nbsp;  <a href="# item-struct">featuredImage</a> <code>struct</code>      <em>featured image for this section (Image)</em>
 &nbsp;  gallery <code>array</code>             <em>list of images for the gallery</em>
 &nbsp;   <strong>[</strong>
-&nbsp;      <a href="#item-struct">Item</a> <code>struct</code>
+&nbsp;      <a href="# item-struct">Item</a> <code>struct</code>
 &nbsp;   <strong>]</strong>
 &nbsp;  htmlTitle <code>string</code>          <em>text for the brower tab title</em>
 &nbsp;  metaDescription <code>string</code>    <em>text for the meta description for the page</em>
@@ -590,12 +599,12 @@
 &nbsp;  title <code>string</code>              <em>Blog title</em>
 &nbsp;  customFields <code>struct</code>    <em>key-value hash of custom data for this page</em>
 &nbsp;  <strong>{</strong>
-&nbsp;      fieldKey <code>string</code>: <fieldValue - mixed>  <em>data as described in customFieldDescriptions</em>
+&nbsp;      fieldKey <code>string</code>: <a href="#custom-field-struct">CustomFieldStruct</a>  <em>The format of this struct is structured according to what is described in customFieldDescription</em>
 &nbsp;      ...
 &nbsp;  <strong>}</strong>
 &nbsp;  customFieldDescriptions <code>struct</code>    <em>key-value hash describing custom field types</em>
 &nbsp;  <strong>{</strong>
-&nbsp;      fieldKey <code>string</code>: <fieldValue - mixed>  <em>data as described in customFieldDescriptions</em>
+&nbsp;      fieldKey <code>string</code>: <a href="#custom-field-description-struct">CustomFieldDescription Struct</a> <em>data as described in customFieldDescriptions</em>
 &nbsp;      ...
 &nbsp;  <strong>}</strong>
 &nbsp;  updatedAt <code>string</code>          <em>last saved date</em>
@@ -606,19 +615,19 @@
 &nbsp;  id <code>int</code>                    <em>meal id</em>
 &nbsp;  published <code>bool</code>            <em>whether page has been published</em>
 &nbsp;  title <code>string</code>              <em>Title of the meal e.g Breakfast</em>
-&nbsp;  description <code>string</code>        <em>An optional description about this meal <strong>contains HTML</strong> </em>
-&nbsp;  content <code>string</code>            <em>The meal data type:</em>
-&nbsp;                              <em><code>dishes</code> where dishes/courses are itemised</em>
-&nbsp;                              <em><code>text</code> for free text</em>
-&nbsp;  courseOrder <code>array</code>        <em>list of courses if contentType <code>dishes</code></em>
-&nbsp;   <strong>[</strong>
-&nbsp;      <a href="#course-struct">Course</a> <code>struct</code>
-&nbsp;   <strong>]</strong>
-&nbsp;  body <code>string</code>               <em>raw body text if contentType <code>text</code></em>
-&nbsp;  timePeriod <code>string</code>         <em><code>morning</code>, <code>afternoon</code>, <code>evening</code> <code>allday</code></em>
-&nbsp;  publishedDate <code>string</code>      <em>Date meal is set for</em>
-&nbsp;  updatedAt <code>string</code>          <em>last saved date</em>
-<strong>}</strong></p>
+&nbsp;  description <code>string</code>        <em>An optional description about this meal </em><em>contains HTML</em><em> *
+&nbsp;  content <code>string</code>            </em>The meal data type:<em>
+&nbsp;                              </em><code>dishes</code> where dishes/courses are itemised<em>
+&nbsp;                              </em><code>text</code> for free text<em>
+&nbsp;  courseOrder <code>array</code>        </em>list of courses if contentType <code>dishes</code><em>
+&nbsp;   </em><em>[</em><em>
+&nbsp;      <a href="# course-struct">Course</a> <code>struct</code>
+&nbsp;   </em><em>]</em><em>
+&nbsp;  body <code>string</code>               </em>raw body text if contentType <code>text</code><em>
+&nbsp;  timePeriod <code>string</code>         </em><code>morning</code>, <code>afternoon</code>, <code>evening</code> <code>allday</code><em>
+&nbsp;  publishedDate <code>string</code>      </em>Date meal is set for<em>
+&nbsp;  updatedAt <code>string</code>          </em>last saved date<em>
+</em><em>}</em>*</p>
 <h2 id="course-struct">Course Struct</h2>
 <h4 id="a-section-in-a-meal-eg-starters">A section in a meal e.g "Starters"</h4>
 <p><strong>{</strong>
@@ -627,7 +636,7 @@
 &nbsp;  description <code>string</code>        <em>course description - can contain HTML</em>
 &nbsp;  dishOrder <code>array</code>           <em>list of dishes in this course</em>
 &nbsp;   <strong>[</strong>
-&nbsp;      <a href="#dish-struct">Dish</a> <code>struct</code>
+&nbsp;      <a href="# dish-struct">Dish</a> <code>struct</code>
 &nbsp;   <strong>]</strong>
 <strong>}</strong></p>
 <h2 id="dish-struct">Dish Struct</h2>
@@ -654,9 +663,142 @@
 <h4 id="the-global-settings-for-sending-voucher-emails">The global settings for sending voucher emails</h4>
 <p><strong>{</strong>
 &nbsp;  purchasedMessage <code>string</code> <em>Message from staff in email, e.g 'Thank you for buying a voucher from us'</em>
-&nbsp;  senderEmail <code>string</code>      <em>Email address email will be sent from </em>
-&nbsp;  senderName <code>string</code>       <em>Name of the email address it will be sent from</em>
-<strong>}</strong></p>
+&nbsp;  senderEmail <code>string</code>      <em>Email address email will be sent from *
+&nbsp;  senderName <code>string</code>       </em>Name of the email address it will be sent from<em>
+</em><em>}</em>*</p>
+<h2 id="custom-field-description-struct">Custom Field Description Struct</h2>
+<p>This struct describes the types that are to be expected in the <code>customField</code> section</p>
+<pre><code class="language-typescript">{
+    id: string; // the field key in the `customFields` 
+    description: string; // a human-readable description of the field
+    type: 'gallery' // an array of images
+        | 'image' // a single image
+        | 'checkbox' // a boolean
+        | 'text' // a simple string
+        | 'file' // a file struct
+        | 'formattedText' // a text string which is raw HTML
+        | 'complex' // an array of elements defined in `fields`
+    primaryField: string; // when the type is `complex` this is the field of the `fields` array which each result is indexed by
+    fields: [ // when type is `complex` we define an array of subfields which apply to each item in the list
+        {
+            id: string; // field key
+            description: string; // human readable description
+            type: 'text'| 'image' | 'formattedText' | 'checkbox' | 'gallery' | 'file'
+        }
+    ]
+
+}
+</code></pre>
+<h2 id="custom-field-struct">Custom Field Struct</h2>
+<h4 id="a-flexible-data-format-for-custom-data">A flexible data format for custom data</h4>
+<p>The corresponding data type for each custom field is defined in <code>customFieldDescriptions</code>. </p>
+<p>The types are one of:</p>
+<h6 id="text-field">Text Field</h6>
+<pre><code class="language-typescript">{
+    // ...
+    customFields: {
+        // ... other fields
+        textField:&quot;some text&quot;
+    },
+    customFieldDescriptions: {
+        // ... other fields
+        textField: {
+            id:&quot;textField&quot;,
+            description: &quot;A Text Field&quot;
+            type: &quot;text&quot;,
+        },
+    }
+}
+</code></pre>
+<h6 id="image-field">Image Field</h6>
+<pre><code class="language-typescript">{
+    // ...
+    customFields: {
+        // ... other fields
+        imageField:{ // image struct
+            large: {
+                src: string;
+            },
+            mobile: {
+                src: string;
+            }
+            thumbnail: {
+                src: string;
+            }
+            raw: {
+                src: string;
+            }
+            ratio: number;
+            focus: {
+                x: number;
+                y: number;
+            }
+        }
+    },
+    customFieldDescriptions: {
+        // ... other fields
+        imageField: {
+            id:&quot;imageField&quot;,
+            description: &quot;An uploaded image&quot;
+            type: &quot;image&quot;,
+        },
+    }
+}
+</code></pre>
+<h6 id="checkbox-field">Checkbox field</h6>
+<pre><code class="language-typescript">{
+    // ...
+    customFields: {
+        // ... other fields
+        checkboxField: false,
+    },
+    customFieldDescriptions: {
+        // ... other fields
+        checkboxField: {
+            id:&quot;checkboxField&quot;,
+            description: &quot;A boolean field&quot;
+            type: &quot;checkbox&quot;,
+        },
+    }
+}
+</code></pre>
+<h6 id="complex-field">Complex Field</h6>
+<p>This is a store of custom lists of multiple structured 
+items need to be added to a page</p>
+<pre><code class="language-typescript">{
+    customFields: {
+        aComplexArray: [
+            {
+                title: 'item-1',
+                description: '&lt;div&gt;some formatted &lt;span&gt;html&lt;/span&gt;&lt;/div&gt;',
+            },
+            {
+                title: 'item-2',
+                description: '&lt;div&gt;some other formatted &lt;span&gt;html&lt;/span&gt;&lt;/div&gt;',
+            },
+        ]
+    },
+    customFieldDescriptiosn: {
+        aComplexArray: {
+            id: 'aComplexArray',
+            description: 'Your Items',
+            fields: [
+                {
+                    id: 'title',
+                    type: 'text',
+                    description: 'title',
+                },
+                {
+                    id: 'description',
+                    type: 'formattedText',
+                    description: 'Description',
+                }
+            ],
+            primaryField: 'title',
+        }
+    }
+}
+</code></pre>
             </div>
           </div>
           <footer>

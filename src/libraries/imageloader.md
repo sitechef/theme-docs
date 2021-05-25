@@ -1,4 +1,4 @@
-#Image Loader
+# Image Loader
 
 Notifies when images have loaded
 
@@ -6,7 +6,7 @@ Additionally performs lazy-loading so images
 are not loaded until section of screen visible
 and removes loading spinners
 
-##Usage
+## Usage
 
 
 To lazy load the image:
@@ -36,7 +36,7 @@ JS:
            }
          });
 
-##Options
+## Options
 
 
     var loader = new ImageLoader({

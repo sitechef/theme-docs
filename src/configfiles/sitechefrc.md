@@ -1,4 +1,4 @@
-#The ".sitechefrc" file
+# The ".sitechefrc" file
 
 When placed at the root of the theme directory, the `.sitechefrc` file
 provides advanced configuration options for the SiteChef CLI.

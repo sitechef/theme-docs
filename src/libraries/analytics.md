@@ -1,8 +1,8 @@
-#Analytics
+# Analytics
 
 Sends Google Analytics events on all anchor clicks
 
-##Usage
+## Usage
 
 Simply require and instantiate with the parent element of the anchors
 

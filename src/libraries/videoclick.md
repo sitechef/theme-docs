@@ -1,10 +1,10 @@
-#VideoClick
+# VideoClick
 
 Uses image data to replace a placeholder image
 for a video with an auto-playable HTML5/Youtube/Vimeo video
 
 
-##Usage
+## Usage
 
 Template HTML:
 
@@ -31,7 +31,7 @@ JS:
         }
       });
 
-##Options
+## Options
 
       var options = {
 

@@ -1,4 +1,4 @@
-#Folder Structure
+# Folder Structure
 
 The command `sitechef init` downloads and expands your selected theme locally.
 
@@ -31,14 +31,14 @@ This is the default theme folder structure:
         voucher.html # template for the voucher
         ...       # other html files included in index.html
     .sitechef/    # Configuration data for sitechef [Do not edit]
-#Config Files
+# Config Files
 
 For information about how to edit the config files see:
 
 - ['.sitechefrc'](configfiles/sitechefrc.md)
 - ['theme.json'](configfiles/themejson.md)
 
-#Version Control
+# Version Control
 
 As yet, SiteChef does not offer any inbuilt version control so executing
 `sitechef publish` will overwrite the existing theme.

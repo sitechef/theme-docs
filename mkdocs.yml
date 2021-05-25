@@ -3,6 +3,7 @@ site_name: SiteChef Theme Documentation
 pages:
 - [index.md, General Use, Introduction & QuickStart]
 - [installation.md, General Use, Installation]
+- [updatingData.md, General Use, Updating Data]
 - [structure.md, General Use, Theme Structure]
 - [templating.md, General Use, HTML Templating]
 - [scss.md, General Use,  Stylesheets]

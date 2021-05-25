@@ -56,6 +56,11 @@
                 </li>
             
                 <li class="toctree-l1 ">
+                    <a class="" href="../../updatingData/">Updating Data</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
                     <a class="" href="../../structure/">Theme Structure</a>
                     
                 </li>
@@ -257,7 +262,7 @@ external libraries beforehand:</p>
 <ul>
 <li>JQuery 1.9+</li>
 <li>Nunjucks Slim (<a href="http://mozilla.github.io/nunjucks/files/nunjucks-slim.js">dev</a>/<a href="http://mozilla.github.io/nunjucks/files/nunjucks-slim.min.js">prod</a>)</li>
-<li>The html5 video template (usually <code>templates/defaults/html5video.html</code>) <strong><em>must be pre-rendered</em></strong> and included in the html. (See <a href="../../assetpipeline/#frontend-templates">Frontend Templating</a> for explanation)</li>
+<li>The html5 video template (usually <code>templates/defaults/html5video.html</code>) <strong><em>must be pre-rendered</em></strong> and included in the html. (See <a href="../../assetpipeline/# frontend-templates">Frontend Templating</a> for explanation)</li>
 <li><a href="http://videojs.com">Video.js</a></li>
 </ul>
 <p>e.g.</p>
@@ -268,8 +273,8 @@ external libraries beforehand:</p>
  &lt;script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/video.js/4.11.3/video.js'&gt;&lt;/script&gt;
 </code></pre>
 <h2 id="usage">Usage</h2>
-<p>The library is designed to work with the <code>defaults/imageBuilder.html</code> <a href="../../templating/#rendering-images">macro</a> which will write out the correct image metadata:</p>
-<p>HTML (auto-rendered by <a href="../../templating/#rendering-images">imageBuilder.html macro</a>:</p>
+<p>The library is designed to work with the <code>defaults/imageBuilder.html</code> <a href="../../templating/# rendering-images">macro</a> which will write out the correct image metadata:</p>
+<p>HTML (auto-rendered by <a href="../../templating/# rendering-images">imageBuilder.html macro</a>:</p>
 <pre><code>&lt;div class="image-continer"&gt;
   &lt;img class="my-image" src='blank-image-path.png' id="124-11" data-id="124-11" data-src="https://cdn.s3.amazon.com/real-image-path.jpg" data-ratio="0.89" data-focus='{"x":0.2,"y":0.9}' data-video="" data-content-type="html5" data-video-srcs='{"mp4High":{"url":"https://cdn.amazon.com/myvideo.mp4"}}'&gt;
   &lt;div class="videoPlay" data-video-id="124-11" data-video-type="html5" data-video-srcs='{"mp4High":{"url":"https://cdn.amazon.com/myvideo.mp4"}'&gt;&lt;/div&gt;

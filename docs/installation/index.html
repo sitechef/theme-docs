@@ -58,10 +58,18 @@
                             <li class="toctree-l2"><a href="#installing-the-sitechef-cli">Installing The SiteChef CLI</a></li>
                             
                         
+                            <li class="toctree-l2"><a href="#setting-up-an-existing-theme">Setting up an existing theme</a></li>
+                            
+                        
                             <li class="toctree-l2"><a href="#generate-an-api-key-for-a-theme">Generate an API key for a theme</a></li>
                             
                         
                         </ul>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../updatingData/">Updating Data</a>
                     
                 </li>
             
@@ -246,14 +254,20 @@
             <div class="section installation">
               <h1 id="installing-the-sitechef-cli">Installing The SiteChef CLI</h1>
 <ol>
-<li>Install <a href="../nodejs.org/download">Node.js</a></li>
-<li>Install the SiteChef command line utility <code>npm install sitechef -g</code></li>
-<li>Clone your theme to a local directory
+<li>install <a href="../nodejs.org/download">node.js</a></li>
+<li>install <a href="https://classic.yarnpkg.com/en/docs/install">yarn 1.x</a></li>
+<li>install <a href="https://github.com/nvm-sh/nvm/blob/master/readme.md#installing-and-updating">nvm</a></li>
+<li>set the node version to <code>8.2.1</code> - this is a requirement until we are able to successfully upgrade the <code>sitechef-cli</code></li>
+<li>install the sitechef command line utility <code>yarn global add sitechef</code></li>
+<li>clone your theme to a local directory
   <code>sitechef init [your-api-key] [optional directory name]</code>
-  eg: <code>sitechef init 999999999888888</code>
-  (see <a href="#generate-an-api-key-for-a-theme">below</a> for more info)</li>
-<li>Move to your directory (<code>cd [your-directory]</code>) and run the local server <code>sitechef serve</code></li>
+  eg: <code>sitechef init 999999999888888</code></li>
 </ol>
+<h1 id="setting-up-an-existing-theme">Setting up an existing theme</h1>
+<p>If you have cloned a theme from github and the <code>package.json</code> does not
+already have a script for installing it you should run</p>
+<pre><code>sitechef setup &lt;your api key&gt;
+</code></pre>
 <h1 id="generate-an-api-key-for-a-theme">Generate an API key for a theme</h1>
 <ol>
 <li>Sign in to the <a href="https://admin.sitechef.co.uk">SiteChef Admin area</a></li>
@@ -273,7 +287,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../structure/" class="btn btn-neutral float-right" title="Theme Structure"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../updatingData/" class="btn btn-neutral float-right" title="Updating Data"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href=".." class="btn btn-neutral" title="Introduction & QuickStart"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -303,7 +317,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
         
       <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../structure/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span style="margin-left: 15px"><a href="../updatingData/" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 <script>
